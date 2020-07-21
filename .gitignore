@@ -9,6 +9,7 @@
 /.vs/BANA_FVS/v15/Browse.VC.db
 /.vs/BANA_FVS/v15/Browse.VC.opendb
 /.vscode
+/build
 /.vs/ProjectSettings.json
 /.vs/VSWorkspaceState.json
 /.vs/config/applicationhost.config
