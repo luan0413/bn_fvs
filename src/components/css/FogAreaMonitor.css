@@ -1,0 +1,757 @@
+.FogAreaMonitor .tableBtnImg {
+    position: absolute;
+    right: 30px;
+    font-size: 16px;
+    top: 8px;
+    z-index: 100;
+    color: #409eff;
+}
+
+.FogAreaMonitor .el-menu {
+    border-right: none;
+}
+
+.FogAreaMonitor .first .readonly li {
+    height: 40px !important;
+}
+
+.FogAreaMonitor .first .inf.readonly span,
+.FogAreaMonitor .first input[type="text"] {
+    color: #666;
+    padding-bottom: 2px;
+    padding-top: 2px;
+}
+
+.FogAreaMonitor .first .bana-inf-right .bana-information-content {
+    padding-top: 15px;
+}
+
+.FogAreaMonitor .bana-information-contents {
+    padding-top: 15px;
+}
+
+.FogAreaMonitor .first .bana-information ul.inf li span {
+    width: 38% !important;
+}
+
+.FogAreaMonitor .first .bana-information ul.inf li input {
+    width: 50% !important;
+}
+
+.FogAreaMonitor .first .bana-information ul.inf li span.unit {
+    width: 12% !important;
+}
+
+
+/*20180518 start*/
+
+
+/*雾灯控制*/
+
+.FogAreaMonitor .second {
+    min-width: 1100px;
+    height: 110px;
+}
+
+.FogAreaMonitor .second .fogAreaBox
+/* ,.FogAreaMonitor .second .wdBox  */
+
+{
+    height: 100%;
+    display: flex;
+}
+
+
+/*工作状态*/
+
+.FogAreaMonitor .second .fogAreaBox .workState {
+    min-width: 240px !important;
+    width: 24%;
+    flex-grow: 1;
+}
+
+.FogAreaMonitor .second .fogAreaBox .workState .bana-information-content {
+    padding-left: 0;
+}
+
+.FogAreaMonitor .second .fogAreaBox .workState .bana-information-content>.contentBox {
+    display: flex;
+    height: 90px;
+}
+
+.FogAreaMonitor .second .fogAreaBox .workState .bana-information-content>.contentBox .imgBox {
+    width: 70px;
+    height: 70px;
+    padding-top: 15px;
+    padding-left: 5px;
+    float: left;
+}
+
+.FogAreaMonitor .second .fogAreaBox .workState .bana-information-content>.contentBox .imgBox img {
+    width: 60px;
+    height: 60px;
+}
+
+.FogAreaMonitor .second .fogAreaBox .workState .bana-information-content>.contentBox .textBox {
+    flex-grow: 1;
+    padding-left: 10px;
+    height: 100%;
+    float: left;
+}
+
+.FogAreaMonitor .second .fogAreaBox .workState .textBox ul {
+    margin-top: 0;
+}
+
+.FogAreaMonitor .second .fogAreaBox .workState .textBox ul li {
+    height: 29px;
+}
+
+.FogAreaMonitor .second .fogAreaBox .workState ul li .el-input,
+.FogAreaMonitor .second .fogAreaBox .workState ul li .el-input .el-input__inner {
+    /* width: 95px !important; */
+    max-width: 120px !important;
+    min-width: 95px !important;
+}
+
+.FogAreaMonitor .second .fogAreaBox .workState.manual {
+    margin-left: 15px;
+    min-width: 180px !important;
+    width: 18%;
+}
+
+.FogAreaMonitor .second .fogAreaBox .workState.manual ul {
+    margin-top: 0;
+}
+
+.FogAreaMonitor .second .fogAreaBox .workState.manual ul li .el-input,
+.FogAreaMonitor .second .fogAreaBox .workState.manual ul li .el-input .el-input__inner {
+    width: 80px !important;
+    max-width: 120px !important;
+    min-width: 80px !important;
+}
+
+
+/*定时方案*/
+
+.FogAreaMonitor .TimingSolution {
+    margin-left: 15px;
+    min-width: 180px !important;
+    width: 18%;
+    flex-grow: 1;
+}
+
+.FogAreaMonitor .TimingSolution .bana-information-content ul {
+    margin-top: 0;
+}
+
+.FogAreaMonitor .TimingSolution .bana-information-content ul li {
+    height: 29px;
+}
+
+
+/*运行参数*/
+
+.FogAreaMonitor .RunConfig {
+    min-width: 440px !important;
+    width: 50%;
+    margin-left: 15px;
+    flex-grow: 2;
+}
+
+.FogAreaMonitor .RunConfig .lampReadonly {
+    margin-top: 0;
+}
+
+.FogAreaMonitor .RunConfig .lampReadonly li {
+    width: 33% !important;
+    float: left;
+    /* height: 28px; */
+}
+
+
+/*下发控制*/
+
+.FogAreaMonitor .second .fogAreaBox .controllerBtn {
+    width: 90px;
+    min-width: 90px;
+    margin-left: 10px;
+    height: 110px;
+}
+
+.FogAreaMonitor .second .fogAreaBox .controllerBtn button+button {
+    margin-top: 20px;
+}
+
+.FogAreaMonitor .second .fogAreaBox .controllerBtn button {
+    margin-left: 0;
+    margin-top: 85px;
+    width: 80px;
+    padding: 4px 0px;
+}
+
+
+/*20180518 15:46 end*/
+
+
+/*20180521 14:08 start*/
+
+.FogAreaMonitor .el-dialog .fogAreaBox {
+    /* display: flex; */
+}
+
+.FogAreaMonitor .el-dialog .fogAreaBox .fogArea_lamp_con {
+    /* min-width: 180px; */
+    /* flex-grow: 1; */
+    height: 50px;
+    /* margin-left: 15px; */
+}
+
+.FogAreaMonitor .el-dialog .fogAreaBox .fogArea_lamp_con.parameter {
+    /* margin-left: 0px; */
+}
+
+.FogAreaMonitor .el-dialog .fogAreaBox .fogArea_lamp_con .bana-information-content ul li {
+    width: 30%;
+    float: left;
+    height: 40px;
+}
+
+.FogAreaMonitor .el-dialog .fogAreaBox .fogArea_lamp_con .bana-information-content ul li.ml3b {
+    margin-left: 3%;
+}
+
+
+/*20180521 14:16 end*/
+
+
+/*手动干预，快捷参数,单选框 20181206*/
+
+.FogAreaMonitor .el-dialog .fogAreaBox .fogArea_lamp_con.parameter .el-radio-group .el-radio {
+    /* display: block;
+    margin-left: 20px;
+    margin-top: 10px; */
+}
+
+
+/*手动干预，设备控制，单选框 20181206*/
+
+.FogAreaMonitor .el-dialog .fogAreaBox .fogArea_lamp_con.deviceController .el-radio-group .el-radio {
+    display: block;
+    margin-left: 5px;
+    margin-top: 10px;
+}
+
+.FogAreaMonitor .el-dialog .fogAreaBox .fogArea_lamp_inf {
+    /* min-width: 640px;
+    flex-grow: 4;
+    margin-left: 15px; */
+    /* height: 60px; */
+}
+
+
+/* 限速屏 20181206 */
+
+.FogAreaMonitor .tabScreen .screen {
+    width: 50px;
+    height: 24px;
+    float: left;
+    line-height: 24px;
+}
+
+.FogAreaMonitor .tabScreen .workModel {
+    width: 60px;
+    height: 24px;
+    float: left;
+    line-height: 24px;
+}
+
+
+/*tab 号角控制 20181206*/
+
+.FogAreaMonitor .tabHorn .hornMusic {
+    width: 70px;
+    height: 24px;
+    float: left;
+    line-height: 24px;
+}
+
+.FogAreaMonitor .tabHorn .hornSound {
+    width: 60px;
+    height: 24px;
+    float: left;
+    line-height: 24px;
+}
+
+.FogAreaMonitor .tabHorn .workModel {
+    width: 60px;
+    height: 24px;
+    float: left;
+    line-height: 24px;
+}
+
+
+/* 警灯控制 20181206*/
+
+.FogAreaMonitor .tabLight .pliLamp {
+    width: 100px;
+    height: 24px;
+    float: left;
+    line-height: 24px;
+}
+
+.FogAreaMonitor .tabLight .workModel {
+    width: 60px;
+    height: 24px;
+    float: left;
+    line-height: 24px;
+}
+
+
+/* 相机控制 20181206*/
+
+.FogAreaMonitor .tabCamera .car {
+    width: 80px;
+    height: 24px;
+    float: left;
+    line-height: 24px;
+}
+
+.FogAreaMonitor .tabCamera .limit {
+    width: 36px;
+    height: 24px;
+    float: left;
+    line-height: 24px;
+    text-align: right;
+}
+
+.FogAreaMonitor .tabCamera .workModel {
+    width: 60px;
+    height: 24px;
+    float: left;
+    line-height: 24px;
+}
+
+
+/* 能见度检测仪 */
+
+.FogAreaMonitor .tabVisibility .visibilityLabel {
+    width: 70px;
+    height: 24px;
+    float: left;
+    line-height: 24px;
+}
+
+
+/**20181206 end**/
+
+.FogAreaMonitor .el-radio-group {
+    display: block !important;
+}
+
+.FogAreaMonitor .unit {
+    font-size: 12px;
+    color: #666;
+}
+
+.FogAreaMonitor .second .fogAreaBox .wdBtn {
+    width: 130px;
+    min-width: 130px;
+    padding-left: 10px;
+    height: 110px;
+}
+
+.FogAreaMonitor .second .fogAreaBox .wdBtn button+button {
+    margin-top: 20px;
+}
+
+.FogAreaMonitor .second .fogAreaBox .wdBtn button {
+    margin-left: 0;
+    margin-top: 20px;
+    width: 90px;
+    padding: 4px 0px;
+}
+
+.FogAreaMonitor ul.controllerChange {
+    min-width: 240px;
+}
+
+.FogAreaMonitor ul.controllerChange li input {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    color: #666;
+    font-size: 12px;
+    padding-bottom: 3px;
+    padding-top: 3px;
+    cursor: not-allowed;
+}
+
+.FogAreaMonitor .controllerTable {
+    min-width: 240px;
+    height: auto;
+    display: flex;
+}
+
+.FogAreaMonitor .controllerTable span:first-of-type {
+    width: 80px;
+    display: inline-block;
+    line-height: 36px;
+}
+
+.FogAreaMonitor .controllerTable span:last-of-type {
+    flex-grow: 1;
+}
+
+.FogAreaMonitor .third .bana-information-content,
+.FogAreaMonitor .fourth .bana-information-content {
+    padding-top: 10px;
+}
+
+.FogAreaMonitor .fifth .bana-information-content,
+.FogAreaMonitor .sixth .bana-information-content {
+    padding-top: 30px;
+}
+
+
+/*雾灯*/
+
+.FogAreaMonitor .jdBox,
+.FogAreaMonitor .xspBox {
+    display: flex !important;
+}
+
+
+/* .FogAreaMonitor .wdBox > div {
+  float: left;
+} */
+
+.FogAreaMonitor .jdBox .jdimg {
+    width: 80px;
+    min-width: 80px;
+    height: 110px;
+    position: relative;
+}
+
+.FogAreaMonitor .xspBox .xspimg {
+    width: 110px;
+}
+
+.FogAreaMonitor .xspBox .xspimg>div:first-of-type {
+    width: 62px;
+    height: 62px;
+    margin-top: 24px;
+    margin-left: 13px;
+    background: #000;
+    color: red;
+    text-align: center;
+    line-height: 56px;
+    font-size: 18px;
+    border: 3px solid green;
+}
+
+.FogAreaMonitor .jdBox .jdimg>div img,
+.FogAreaMonitor .xspBox .xspimg>div img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* .FogAreaMonitor .wdBox .wdrightBox, */
+
+.FogAreaMonitor .jdBox .jdrightBox， .xspBox .xsprightBox {
+    flex-grow: 1 !important;
+    height: 115px !important;
+}
+
+
+/*leftMenu*/
+
+.FogAreaMonitor .leftMenuBox .el-menu li {
+    height: auto;
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+
+.FogAreaMonitor .leftMenuBox .el-menu li>div.imgBox {
+    width: 50px;
+    height: 44px;
+    margin: 0 auto;
+    line-height: 1;
+    overflow: hidden;
+}
+
+.FogAreaMonitor .leftMenuBox .el-menu li>div.text {
+    height: 20px;
+    line-height: 20px;
+    font-size: 13px;
+    text-align: center;
+}
+
+
+/*hover*/
+
+.FogAreaMonitor .leftMenuBox .el-menu li:hover {
+    background: #fff;
+}
+
+.FogAreaMonitor .leftMenuBox .el-menu li:hover>div.text {
+    color: #2480d4;
+}
+
+.FogAreaMonitor .xspBox .xspimg .el-switch {
+    margin-top: 10px;
+}
+
+.FogAreaMonitor .jdBox .jdimg>div {
+    width: 62px;
+    height: 62px;
+    border: 1px solid #dddddd;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 20px;
+    margin: auto;
+}
+
+.FogAreaMonitor .jdBox .jdimg>div img,
+.FogAreaMonitor .xspBox .xspimg>div img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* .wdBox .wdrightBox, */
+
+.FogAreaMonitor .jdBox .jdrightBox， .xspBox .xsprightBox {
+    flex-grow: 1 !important;
+    height: 115px !important;
+}
+
+
+/* .wdBox .el-radio {
+  line-height: 26px;
+} */
+
+
+/*能见度检测仪tab 0316*/
+
+.FogAreaMonitor .visibility {
+    padding-top: 10px;
+    min-height: 32px;
+    color: #666;
+}
+
+.FogAreaMonitor .visibility .el-form .text {
+    float: left;
+}
+
+.FogAreaMonitor .visibility .el-input.el-input--mini {
+    width: 150px;
+}
+
+.FogAreaMonitor .visibility .el-form .el-form-item {
+    float: left;
+    margin-top: -5px;
+}
+
+.FogAreaMonitor .visibility+.el-button {
+    padding: 4px 20px;
+    font-size: 12px;
+    margin-left: 227px;
+}
+
+.FogAreaMonitor .screen+.el-button {
+    font-size: 12px;
+    margin-left: 267px;
+}
+
+.FogAreaMonitor .visibility .el-input--mini .el-input__inner {
+    width: 50px !important;
+    margin-right: 3px;
+}
+
+
+/* .FogAreaMonitor .fogAreaMonitor .lamp, */
+
+
+/* .FogAreaMonitor .el-dialog .lamp {
+    height: 40px;
+} */
+
+.FogAreaMonitor .el-dialog .lamp li {
+    width: 33% !important;
+    float: left;
+    /* margin-top: -5px; */
+    /* height: 50px; */
+}
+
+
+/* .FogAreaMonitor .el-form-item__content>.el-select {
+    width: 94px !important;
+    margin-left: 5px;
+} */
+
+.FogAreaMonitor .el-dialog .el-form-item__content>.el-select.el-select--mini {
+    width: 94px !important;
+    /* margin-left: 8px; */
+    padding-left: 0 !important;
+}
+
+.FogAreaMonitor .el-input {
+    /* min-width: 50px !important; */
+    /* max-width: 80px !important; */
+    font-size: 12px;
+    width: auto;
+    float: left;
+    padding: 0 5px !important;
+}
+
+.FogAreaMonitor .second .el-input {
+    /* width: 60px !important; */
+    min-width: 50px;
+    max-width: 98px;
+}
+
+.FogAreaMonitor .el-dialog .bana-information .el-input {
+    /* min-width: 50px !important; */
+    /* max-width: 80px; */
+    /* width: 80px !important; */
+    font-size: 12px;
+    width: 90%;
+    float: left;
+    padding: 0 5px !important;
+}
+
+
+/* .FogAreaMonitor .el-dialog .bana-information .mqysIpnput .el-input {
+    width: 80px !important;
+    max-width: 80px;
+} */
+
+.FogAreaMonitor .el-dialog .lampInput .el-form-item__content>.el-select.el-select--mini,
+.FogAreaMonitor .el-dialog .lampInput .el-form-item__content>.el-input.el-seinputlect--mini {
+    width: 100% !important;
+}
+
+.FogAreaMonitor .visibility .el-input {
+    width: 140px !important;
+}
+
+
+/*radio*/
+
+.FogAreaMonitor .el-radio+.el-radio {
+    margin-left: 15px;
+}
+
+
+/*active*/
+
+.FogAreaMonitor .leftMenuBox .el-menu .el-menu-item.is-active {
+    border-right: 3px solid #2480d4;
+    background: #ecf5ff;
+}
+
+.FogAreaMonitor .leftMenuBox .el-menu .el-menu-item.is-active:hover {
+    background: #ecf5ff;
+}
+
+.FogAreaMonitor .leftMenuBox .el-menu .el-menu-item>div.imgBox {
+    background: url("../img/fogArea_normal.png") no-repeat;
+}
+
+.FogAreaMonitor .leftMenuBox .el-menu .el-menu-item.is-active>div.imgBox {
+    background: url("../img/fogArea_hover.png") no-repeat;
+}
+
+.FogAreaMonitor .el-menu-item.is-active {
+    color: #2480d4;
+}
+
+.FogAreaMonitor .dialog-footer {
+    margin-top: 10px;
+}
+
+.FogAreaMonitor .wukzqBox {
+    margin-top: 10px;
+}
+
+.FogAreaMonitor .bana-informations {
+    margin-top: 15px;
+    width: 100%;
+    min-height: 125px;
+    position: relative;
+    float: left;
+    border-width: 1px;
+    border-style: solid;
+    border: 1px solid #dcdcdc;
+    border-color: rgb(220, 220, 220);
+    -o-border-image: initial;
+    border-image: initial;
+    padding: 15px 10px;
+    color: #666;
+}
+
+.FogAreaMonitor .bana-titles {
+    position: absolute;
+    height: 30px;
+    background: #fff;
+    top: -15px;
+    left: 15px;
+    padding: 5px 10px;
+    line-height: 20px;
+    color: #666;
+}
+
+.FogAreaMonitor .loading {
+    width: 100%;
+}
+
+.FogAreaMonitor .leftlabel {
+    float: left;
+    font-size: 12px;
+}
+
+.device.el-select {
+    width: 150px;
+    height: 24px;
+    float: left;
+}
+
+.device.el-select .el-input {
+    max-width: 150px;
+}
+
+.FogAreaMonitor .el-table .el-table__header-wrapper table,
+.FogAreaMonitor .el-table .el-table__body-wrapper table {
+    width: 100% !important;
+}
+
+.FogAreaMonitor .el-table .el-table__body,
+.FogAreaMonitor .el-table .el-table__footer,
+.FogAreaMonitor .el-table .el-table__header {
+    table-layout: inherit !important;
+}
+/*气象数据、遥感数据tab页 191023*/
+.FogAreaMonitor .weather .inf span,
+.FogAreaMonitor .weather input[type="text"] {
+  color: #666;
+  padding-bottom: 2px;
+  padding-top: 2px;
+}
+.FogAreaMonitor .weather .bana-information ul.inf li {
+  width: 30% !important;
+  height: 40px !important;
+}
+.FogAreaMonitor .weather .bana-information ul.inf li span {
+  width: 38% !important;
+}
+
+.FogAreaMonitor .weather .bana-information ul.inf li input {
+  width: 50% !important;
+}
+
+.FogAreaMonitor .weather .bana-information ul.inf li span.unit {
+  width: 12% !important;
+}

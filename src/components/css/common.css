@@ -1,0 +1,139 @@
+/*登录页面*/
+
+.login_bg .el-form-item__label {
+    font-size: 16px;
+}
+
+.login_bg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: url(../img/login_bg.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.login_bg .loginBox {
+    width: 595px;
+    height: 319px;
+    background: url(../img/loginBox.png) no-repeat;
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    margin-top: -170px;
+}
+
+.login_bg .loginBox .title {
+    width: 204px;
+    height: 29px;
+    margin: 30px 248px 20px;
+    background: url(../img/login_title.png) no-repeat;
+}
+
+.login_bg .formBox {
+    width: 400px;
+    height: 220px;
+    background: transparent;
+    position: absolute;
+    left: 59%;
+    transform: translateX(-50%);
+}
+
+.login_bg .formBox .el-input.el-input--small {
+    padding-left: 5px;
+}
+
+.login_bg .formBox .user {
+    margin-bottom: 30px;
+}
+
+.login_bg .formBox .login {
+    margin-top: 20px;
+    width: 100%;
+    font-size: 18px;
+    line-height: 25px;
+}
+
+.login_bg .formBox .same i {
+    display: block;
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    left: -70px;
+    bottom: 6px;
+}
+
+.login_bg .formBox .same .one1 {
+    background: url(../img/user.png);
+}
+
+.login_bg .formBox .same .two1 {
+    background: url(../img/pass.png);
+}
+
+.login_bg .formBox .eye {
+    display: block;
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    z-index: 10;
+    right: 10px;
+    top: 3px;
+    cursor: pointer;
+}
+
+
+/*错误页面*/
+
+.Error {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: url(../img/login_bg.png) no-repeat;
+    background-size: 100% 100%;
+    overflow: hidden;
+}
+
+.Error .content {
+    width: 300px;
+    height: 400px;
+    position: absolute;
+    left: 40%;
+    top: 15%;
+    display: block;
+}
+
+.Error .content h1 {
+    font-size: 90px;
+    display: block;
+    margin-left: 60px;
+    margin-bottom: 30px;
+    color: white;
+}
+
+.Error .content h3 {
+    font-size: 50px;
+    display: block;
+    margin-bottom: 60px;
+    color: white;
+}
+
+.Error .content button {
+    display: block;
+    width: 160px;
+    font-size: 25px;
+    margin-left: 70px;
+    cursor: pointer;
+    text-align: center;
+    background: rgba(58, 212, 247, 0);
+    border: none;
+    color: white;
+}
+
+.Error .content button:hover {
+    color: orange;
+    font-size: 30px;
+}

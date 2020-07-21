@@ -1,0 +1,640 @@
+/*头部*/
+
+header.header {
+    width: 100%;
+    min-width: 1243px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #2480d4 url(../img/logo-name.png) no-repeat;
+    background-position: 15px 10px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #015aab;
+}
+
+header.header .banaAdmin,
+.banaNav {
+    float: right;
+    height: 28px;
+    line-height: 28px;
+    font-size: 14px;
+    color: #fff;
+    margin-top: 14px;
+}
+
+
+/*左侧菜单*/
+
+.content {
+    position: absolute;
+    min-width: 1320px;
+    left: 0;
+    right: 0;
+    top: 50px;
+    bottom: 0;
+    display: flex;
+    /* overflow-x:hidden; */
+}
+
+nav.nav {
+    background: #fff;
+    bottom: 0;
+    height: 100%;
+    position: relative;
+}
+
+nav.nav .navBox {
+    /* overflow: auto; */
+    width: 240px;
+    height: 100%;
+    font-size: 13px;
+    border-right: 1px solid #ddd;
+}
+
+nav.nav .navBoxBar {
+    width: 12px;
+    height: 80px;
+    background: url(../img/side.png) no-repeat;
+    position: absolute;
+    right: -11px;
+    top: 40%;
+    z-index: 111;
+    background-size: 12px 80px;
+    cursor: pointer;
+}
+
+.navBoxBar img {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%)
+}
+
+.leftTreeBox {
+    padding-left: 10px;
+    position: absolute;
+    top: 32px;
+    bottom: 0;
+    overflow: auto;
+    width: 99%;
+    /* box-sizing: border-box */
+}
+
+.leftMenuTitle,
+.leftMenuTitle {
+    width: 100%;
+    height: 32px;
+    line-height: 32px;
+    background: #2480d4;
+    color: #fff;
+    text-indent: 6px;
+    text-align: left;
+    position: relative;
+}
+
+.leftMenuTitle,
+.leftMenuTitle i {
+    padding-right: 5px;
+}
+
+.leftMenuContent {
+    position: absolute;
+    width: 99%;
+    top: 32px;
+    bottom: 0;
+    overflow: auto;
+}
+
+.leftMenuContent li {
+    width: 100%;
+    height: 66px;
+    color: #323232;
+    cursor: pointer;
+}
+
+.leftMenuContent li>div.fogimgBox {
+    height: 45px;
+    padding-top: 8px;
+}
+
+.leftMenuContent li>div.fogimgBox>div.fogimg {
+    width: 70px;
+    height: 35px;
+    margin: auto;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+}
+
+.leftMenuContent li>div.fogimgBox>div.fogimg>img {
+    width: 100%;
+    height: 100%;
+}
+
+.leftMenuContent li>span {
+    display: inline-block;
+    height: 18px;
+    width: 100%;
+    text-align: center;
+    line-height: 18px;
+    padding: 0 30px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 13px;
+}
+
+.leftMenuContent li:hover {
+    color: #2480d4;
+}
+
+.leftMenuContent li.active {
+    color: #2480d4;
+    background: #eaf0fd;
+    border-right: 3px solid #2480d4;
+}
+
+.leftMenuContent li.active>div.fogimgBox>div.fogimg,
+.leftMenuContent li:hover>div.fogimgBox>div.fogimg {
+    border: 1px solid #2480d4;
+}
+
+
+/*内容区*/
+
+section.section {
+    width: 100% !important;
+    /* float: left; */
+    flex-grow: 1;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    min-width: 1040px;
+}
+
+
+/*面包屑*/
+
+.section .navBox {
+    width: 100%;
+    height: 40px;
+    padding: 10px 20px;
+    /* border-bottom: 1px solid #eaeaea; */
+    border-bottom: 1px solid #ddd;
+}
+
+.section .navBox .breadcrumbBox {
+    height: 20px;
+    width: auto;
+    border-left: 2px solid #2480d4;
+}
+
+.section .navBox .breadcrumbBox>div {
+    line-height: 20px;
+    padding-left: 10px;
+}
+
+.map-box-kong {
+    width: 100%;
+    flex-grow: 1;
+    overflow: auto;
+}
+
+.map-box {
+    position: absolute;
+    top: 0;
+    /* bottom: 181px; */
+    bottom: 0;
+    left: 240px;
+    right: 0;
+}
+
+.tab-box {
+    width: 100%;
+    position: relative;
+    border-top: 1px solid #ddd;
+    box-sizing: border-box;
+    background: #fff;
+}
+
+.tabBox {
+    height: 180px;
+    width: 100%;
+    padding-top: 5px;
+}
+
+.tabBoxBar {
+    height: 12px;
+    width: 80px;
+    background: url(../img/bot.png) no-repeat;
+    position: absolute;
+    top: -12px;
+    left: 44%;
+    background-size: 80px 12px;
+    cursor: pointer;
+}
+
+.tabBoxBar img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+
+/*内容*/
+
+
+/*tab 边框*/
+
+.bana-information {
+    width: 100%;
+    height: 110px;
+    position: relative;
+    float: left;
+    border-width: 1px;
+    border-style: solid;
+    border: 1px solid #dcdcdc;
+    border-color: rgb(220, 220, 220);
+    border-image: initial;
+    padding: 15px 10px;
+    color: #666;
+}
+
+.bana-information .bana-title {
+    position: absolute;
+    height: 30px;
+    top: -15px;
+    left: 15px;
+    line-height: 20px;
+    background: rgb(255, 255, 255);
+    padding: 5px 10px;
+}
+
+.bana-information-content {
+    padding-left: 10px;
+}
+
+.bana-information ul {
+    margin-bottom: 0;
+    min-height: 22px;
+    margin-top: 5px;
+}
+
+.panel {
+    padding: 20px;
+}
+
+.bana-information .readonly input,
+.bana-information .readonly textarea {
+    cursor: not-allowed;
+}
+
+.bana-information.bana-inf-left {
+    width: 60%;
+    min-width: 600px;
+}
+
+.bana-information.bana-inf-right {
+    width: 38%;
+    margin-left: 2%;
+}
+
+.bana-information .bana-title {
+    position: absolute;
+    height: 30px;
+    background: #fff;
+    top: -15px;
+    left: 15px;
+    padding: 5px 10px;
+    line-height: 20px;
+    color: #666;
+}
+
+.bana-information ul.inf li {
+    float: left;
+    width: 25%;
+    height: 22px;
+    line-height: 22px;
+    font-size: 12px;
+}
+
+.bana-information ul.inf li span {
+    width: 55%;
+    text-align: right;
+    float: left;
+}
+
+.bana-information ul.inf li input {
+    width: 32%;
+    text-align: left;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    float: left;
+    margin-top: 2px;
+    color: #666;
+    cursor: not-allowed;
+}
+
+.bana-information ul.inf li span.unit {
+    width: 13%;
+    text-align: left;
+    text-indent: 3px;
+}
+
+.bana-information ul.inf li.text span {
+    width: 13.5%;
+    float: left;
+}
+
+.bana-information ul.inf li.text textarea {
+    width: 85%;
+    float: left;
+    line-height: 20px;
+    height: 50px;
+    padding: 0 5px;
+    overflow: auto;
+    /*ie*/
+    font-size: 12px;
+}
+
+.bana-information ul.inf.textareaBox {
+    height: auto !important;
+    box-sizing: border-box
+}
+
+.bana-information ul.inf.textareaBox li.text {
+    height: auto !important;
+    box-sizing: border-box
+}
+
+.bana-information ul.control li {
+    margin-top: 10px;
+    padding-left: 15px;
+    width: 100%;
+    min-height: 22px;
+}
+
+.bana-information ul.control li>button,
+.bana-information ul.control li>span {
+    float: left;
+}
+
+.bana-information ul.control li input {
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    width: 100px;
+    float: left;
+    color: #666;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin-top: -2px !important;
+}
+
+.bana-information ul.control li input[type='text'] {
+    margin: 0 5px;
+}
+
+.bana-information ul.radio li {
+    float: left;
+    width: 33%;
+    height: 22px;
+}
+
+.bana-information ul.radio li input[type='radio'] {
+    width: 20px;
+    margin: 0;
+    position: static;
+    float: left;
+    margin-top: 3px;
+}
+
+.bana-information ul.radio li:nth-of-type(1) {
+    padding-left: 15px;
+}
+
+.bana-information ul.radio li span {
+    float: left;
+}
+
+.loginBox .formBox .el-input__inner {
+    padding-left: 30px;
+    border: none;
+    line-height: 25px;
+    font-size: 16px;
+    padding-right: 32px;
+    background: transparent;
+}
+
+.loginBox .formBox .el-form-item__error {
+    font-size: 14px;
+    padding-top: 8px;
+    padding-left: 33px !important
+}
+
+.loginBox .formBox .same .el-form-item__content {
+    margin-left: 70px !important;
+}
+
+.loginBox .formBox .same {
+    border: 1px solid #e9e9e9;
+    border-radius: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.loginBox .formBox .el-form-item__label {
+    font-size: 16px !important;
+    width: 70px !important;
+}
+
+.loginBox .formBox .btn {
+    margin-left: 0px;
+}
+
+.loginBox .formBox .el-form-item__content {
+    margin-left: 0px !important;
+}
+
+
+/* 地图控制栏 */
+
+.section .connmand {
+    height: 32px;
+    /* line-height: 32px; */
+    background: url("../img/bg.jpg");
+    width: 100%;
+    position: relative;
+    /* border-top: 1px solid #eaeaea; */
+    z-index: 10;
+    left: -1px;
+    padding-top: 2px;
+    box-sizing: border-box;
+    padding-left: 20px;
+    /* border-bottom: 1px solid #87A4BD; */
+    border-bottom: 1px solid #87A4BD;
+}
+
+.section .connmand input {
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+    margin-right: 10px;
+    background-image: url("../img/enlarge.jpg");
+    background-position: 0px -1px;
+    /* background-size: contain; */
+}
+
+.section .connmand input:nth-child(1) {
+    background-image: url("../img/hand.png");
+}
+
+.section .connmand input:nth-child(1):hover {
+    background-image: url("../img/hand-hover.png");
+}
+
+.section .connmand input:nth-child(1).active {
+    background-image: url("../img/hand-hover.png");
+}
+
+.section .connmand input:nth-child(2) {
+    background-image: url("../img/enlarge.jpg");
+}
+
+.section .connmand input:nth-child(2):hover {
+    background-image: url("../img/zoomin-active.jpg");
+}
+
+.section .connmand input:nth-child(2).active {
+    background-image: url("../img/zoomin-active.jpg");
+}
+
+.section .connmand input:nth-child(3) {
+    background-image: url("../img/narrow.jpg");
+}
+
+.section .connmand input:nth-child(3):hover {
+    background-image: url("../img/zoomout-active.jpg");
+}
+
+.section .connmand input:nth-child(3).active {
+    background-image: url("../img/zoomout-active.jpg");
+}
+
+.section .connmand input:nth-child(4) {
+    background-image: url("../img/full.jpg");
+}
+
+.section .connmand input:nth-child(4):hover {
+    background-image: url("../img/extent-active.jpg");
+}
+
+.section .connmand input:nth-child(4).active {
+    background-image: url("../img/extent-active.jpg");
+}
+
+.section .connmand input:nth-child(5) {
+    background-image: url("../img/measure.jpg");
+}
+
+.section .connmand input:nth-child(5):hover {
+    background-image: url("../img/measure-len-active.jpg");
+}
+
+.section .connmand input:nth-child(5).active {
+    background-image: url("../img/measure-len-active.jpg");
+}
+
+.section .connmand input:nth-child(6) {
+    background-image: url("../img/area.jpg");
+}
+
+.section .connmand input:nth-child(6):hover {
+    background-image: url("../img/measure-area-active.jpg");
+}
+
+.section .connmand input:nth-child(6).active {
+    background-image: url("../img/measure-area-active.jpg");
+}
+
+.section .connmand input:nth-child(7) {
+    background-image: url("../img/forarea.jpg");
+    background-position: -3px -2px;
+}
+
+.section .connmand input:nth-child(7):hover {
+    background-image: url("../img/forarea-active.jpg");
+    background-position: -3px -2px;
+}
+
+.section .connmand input:nth-child(7).active {
+    background-image: url("../img/forarea-active.jpg");
+    background-position: -3px -2px;
+}
+
+.section .differcommand input:nth-child(7) {
+    background-image: url("../img/mark.jpg");
+    background-size: 27px 27px;
+    background-position: -2px -1px;
+}
+
+.section .differcommand input:nth-child(7):hover {
+    background-image: url("../img/mark-active.jpg");
+    /* background-position: -2px -2px; */
+}
+
+.section .differcommand input:nth-child(7).active {
+    background-image: url("../img/mark-active.jpg");
+    /* background-position: -2px -2px; */
+}
+
+
+/* 地图气泡 */
+
+ul.openInfoWindow {
+    width: 100%;
+    height: 118px;
+    /* background: blanchedalmond; */
+}
+
+ul.openInfoWindow h4 {
+    font-size: 18px;
+    font-weight: 700;
+    padding-left: 4px;
+}
+
+ul.openInfoWindow li {
+    font-size: 14px;
+    padding: 2px 5px;
+}
+
+ul.openInfoWindow li label {
+    margin-right: 10px;
+}
+
+
+/*故障统计*/
+
+.devicePie {
+    width: 33% !important;
+    height: 50% !important;
+    border: none !important;
+    float: left !important;
+    padding-bottom: 10px;
+}
+
+
+/*上传*/
+
+.el-dialog .updateImg .el-input.el-input--mini {
+    width: 100px !important;
+}
+
+.el-dialog .updateImg .el-input__inner {
+    width: 95px !important;
+    border: none !important;
+    background: transparent;
+    margin-left: -15px;
+    color: #666;
+}

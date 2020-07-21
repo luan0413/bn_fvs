@@ -1,0 +1,1227 @@
+.grid .section {
+    display: block;
+}
+
+
+/*search*/
+
+.grid .searchBox {
+    width: 100%;
+    min-height: 60px;
+    border-bottom: 1px solid #ddd;
+}
+
+.grid .searchBox .searchList {
+    width: 100%;
+    min-height: 45px;
+    padding-top: 15px;
+}
+
+.grid .searchBox .searchList li {
+    width: 25%;
+    height: 35px;
+    float: left;
+}
+
+
+/* .grid .searchBox .searchList li .el-input {
+    padding-left: 10px;
+    width: 200px !important;
+} */
+
+.grid .searchBox .searchList li .el-select {
+    /* padding-left: 10px; */
+    width: 140px;
+}
+
+
+/*grid*/
+
+.grid .btnBox {
+    width: 100%;
+    height: 50px;
+}
+
+.grid .gridBox {
+    width: 98%;
+    margin: 0 1%;
+    border: 1px solid #ddd;
+}
+
+.grid .gridBox .el-table {
+    font-size: 12px;
+}
+
+.grid .gridBox .el-table thead {
+    color: #606266;
+}
+
+.grid .gridBox .el-table td,
+.grid .gridBox .el-table th {
+    padding: 6px 0;
+}
+
+.grid .gridBox .el-table th {
+    background: #eaf0fd;
+}
+
+.grid .el-table--border td:not(:last-of-type) {
+    border-bottom: 1px solid #ebeef5;
+}
+
+.grid .gridBox .el-pagination {
+    float: right;
+    margin-top: 10px;
+}
+
+
+/*dialog*/
+
+
+/* .el-dialog__footer .dialog-footer {
+    padding-right: 10px;
+} */
+
+.grid .el-dialog .el-textarea.el-input--mini {
+    padding-left: 10px;
+    padding-right: 10px;
+    resize: none !important;
+}
+
+.grid .el-dialog .el-form-item__content>.el-input.el-input--mini {
+    /* padding-left: 10px !important; */
+    padding-right: 10px;
+    width: 160px !important;
+}
+
+.grid .el-dialog .el-form-item__content>.el-select.el-select--mini {
+    padding-left: 10px !important;
+    padding-right: 10px;
+    width: 160px !important;
+}
+
+.grid .el-dialog .el-textarea__inner {
+    padding-left: 5px !important;
+    padding-right: 5px;
+}
+
+.grid .el-dialog .el-form-item__error {
+    left: 5px !important;
+}
+
+
+/*用户*/
+
+.User .el-dialog .el-form-item__content>.el-input.el-input--mini,
+.User .el-dialog .el-form-item__content>.el-select.el-select--mini {
+    width: 200px !important;
+}
+
+
+
+
+/*下发设备初始参数*/
+
+.Parameter .el-dialog .el-form-item__content>.el-input.el-input--mini {
+    width: 200px !important;
+}
+
+
+/*字典管理*/
+
+.Code .el-dialog .el-form-item__content>.el-input.el-input--mini,
+.Code .el-dialog .el-form-item__content>.el-select.el-select--mini {
+    width: 200px !important;
+}
+
+
+/*定时方案*/
+
+
+/* .SolutionConfig .imput_number {
+    width: 163px;
+    height: 24px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-left: 5px;
+    padding: 5px;
+    color: #666;
+} */
+
+.SolutionConfig .el-tabs {
+    margin-top: 10px;
+}
+
+.SolutionConfig .el-tabs .el-tabs__content .el-button.tableBtnImg {
+    padding: 0 !important;
+    font-size: 12px;
+}
+
+.SolutionConfig .operateBtn {
+    margin-left: 0;
+    margin-top: 0;
+}
+
+.SolutionConfig .operateBtn+.operateBtn {
+    margin-left: 10px;
+}
+
+
+/* .SolutionConfig.grid .searchBox .searchList li .el-input {
+    width: 140px !important;
+} */
+
+.SolutionConfig.grid .searchBox .searchList li .el-select {
+    width: 200px !important;
+}
+
+.SolutionConfig .el-dialog .el-checkbox-group {
+    padding-left: 5px !important;
+}
+
+.SolutionConfig .el-dialog .el-form {
+    overflow: auto;
+}
+
+.SolutionConfig .el-dialog .nameFormBox {
+    width: 100%;
+    overflow: auto;
+}
+
+.SolutionConfig .el-dialog .nameFormBox>li {
+    width: 33%;
+    float: left;
+}
+.SolutionConfig .el-dialog .gpsFormBox {
+  width: 100%;
+  overflow: auto;
+}
+
+.SolutionConfig .el-dialog .gpsFormBox>li {
+  /* width: 33%; */
+  /* float: left; */
+}
+
+.SolutionConfig .el-dialog .bana-information {
+    padding-bottom: 0;
+}
+
+.SolutionConfig.grid .btnBox {
+    height: 40px;
+}
+
+.SolutionConfig.grid .gridBox {
+    padding: 0;
+    width: 100%;
+    margin: 0;
+}
+
+
+/*下发设备初始参数*/
+
+.QueryDevices .bana-information {
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.QueryDevices .bana-information .bana-title {
+    font-size: 12px !important;
+}
+
+
+/*雾区配置-Config */
+
+
+/* .Config .nameFormBox .el-radio+.el-radio {
+    margin-left: 10px;
+} */
+
+
+/* .Config .el-dialog .el-form-item__content>.el-select.el-select--mini {
+    padding-left: 15px !important;
+    width: 160px !important;
+}
+
+.Config .el-dialog .el-form-item__content>.fogarea.el-select.el-select--mini {
+    padding-left: 15px !important;
+    width: 80% !important;
+} */
+
+
+/* .Config .el-dialog .fogarea.el-input.el-input--mini {
+    width: 260px !important;
+} */
+
+
+/* .Config .sysmon {
+    display: block;
+    min-width: 1040px !important;
+    background: #fff;
+} */
+
+
+/*步骤，雾区*/
+
+.SystemConfig .fixedBox {
+    width: 100%;
+    height: 300px;
+    padding: 10px 20px;
+    background: #f7f9fe;
+    border-bottom: 1px solid #ddd;
+}
+
+.fixedBox .stepBox {
+    width: 100%;
+    height: 60px;
+}
+
+.fogBox {
+    display: flex;
+}
+
+.fogBox .fogLeftBox {
+    flex-grow: 1;
+    min-width: 240px;
+    height: 218px;
+    border: 1px solid #d9d9d9;
+    float: left;
+    background: #fff;
+}
+
+.fogBox .fogLeftBox .fogLefetitle {
+    width: 100%;
+    height: 36px;
+    background: #eaf0fd;
+    border-bottom: 1px solid #d9d9d9;
+    font-size: 13px;
+    line-height: 36px;
+    color: #323232;
+    text-align: left;
+}
+
+.fogBox .fogLeftBox .fogLefetitle>span {
+    padding-left: 20px;
+}
+
+.fogBox .fogLeftBox .fogLefetitle>button {
+    margin-top: 6px;
+    padding: 4px 20px;
+    font-size: 12px;
+    color: #2480d4;
+    border: 1px solid #2480d4;
+    float: right;
+    margin-right: 20px;
+}
+
+
+/* .fogBox .fogLeftBox .fogLefeContent {
+    height: 120px;
+    overflow: auto;
+} */
+
+.fogBox .fogRightBox {
+    min-width: 800px;
+    height: 218px;
+    margin-left: 1%;
+    border: 1px solid #d9d9d9;
+    float: left;
+    background: #fff;
+}
+
+.fogBox .fogRightBox .fogRightBoxTitle {
+    width: 100%;
+    height: 36px;
+    background: #eaf0fd;
+    border-bottom: 1px solid #d9d9d9;
+    font-size: 13px;
+    line-height: 36px;
+    color: #323232;
+    text-indent: 20px;
+    text-align: left;
+}
+
+.fogRightBtn {
+    margin-top: 5px;
+    float: right;
+    margin-right: 20px;
+}
+
+.stepBtn {
+    width: 200px;
+    margin: 20px auto !important;
+}
+
+.fogRightBtn button,
+.stepBtn button {
+    padding: 4px 20px;
+    font-size: 12px;
+}
+
+.SystemConfig .changeBox {
+    width: 100%;
+    height: 320px;
+    padding: 0 20px;
+    margin-top: 10px;
+}
+
+
+/*下一步*/
+
+.changeBox .changeContentBox {
+    overflow: auto;
+    height: 320px;
+}
+
+.changeBox .changeContentBox .changeTxetBox {
+    display: flex;
+}
+
+.changeBox .fogLeftBox {
+    flex-grow: 1;
+    min-width: 240px;
+    height: 320px;
+    border: 1px solid #d9d9d9;
+    float: left;
+}
+
+.changeBox .fogLeftBox .changeBoxleftTitle {
+    width: 100%;
+    height: 36px;
+    background: #f3f4f4;
+    border-bottom: 1px solid #d9d9d9;
+    font-size: 13px;
+    line-height: 36px;
+    color: #323232;
+    text-align: left;
+}
+
+.changeBox .fogLeftBox .changeBoxleftTitle>span,
+.changeBox .fogRightBox .changeBoxRightTitle>span {
+    padding-left: 20px;
+}
+
+.changeBox .fogLeftBox .changeBoxleftTitle>button,
+.changeBox .fogRightBox .changeBoxRightTitle>button {
+    margin-top: 6px;
+    padding: 4px 20px;
+    font-size: 12px;
+    color: #2480d4;
+    border: 1px solid #2480d4;
+    float: right;
+    margin-right: 20px;
+}
+
+.changeBox .fogLeftBox .changeBoxLeftContent {
+    height: 180px;
+    overflow: auto;
+}
+
+.fogRightBox {
+    width: 800px;
+    height: 320px;
+    margin-left: 1%;
+    border: 1px solid #d9d9d9;
+    float: left;
+}
+
+.fogRightBox .changeBoxRightTitle {
+    width: 100%;
+    height: 36px;
+    background: #f3f4f4;
+    border-bottom: 1px solid #d9d9d9;
+    font-size: 13px;
+    line-height: 36px;
+    color: #323232;
+    text-indent: 20px;
+    text-align: left;
+}
+
+
+/*内部重置*/
+
+
+/*表单验证*/
+
+.SystemConfig .searchBox .searchList {
+    width: 100%;
+    min-height: 45px;
+    padding-top: 10px;
+}
+
+.SystemConfig .sysmon .searchBox .searchList li {
+    width: 33%;
+    height: 40px;
+    float: left;
+}
+.SystemConfig .searchBox .lampList .el-form-item.is-required,
+.SystemConfig .searchBox .lampList .el-form-item {
+    display: inline-block;
+}
+.SystemConfig .searchBox .lampList .el-form-item__content>.el-input,
+.SystemConfig .searchBox .searchList .el-form-item__content>.el-input {
+    padding-left: 10px;
+}
+.SystemConfig .searchBox .lampList .el-form-item__content>.el-input .el-input__inner,
+.SystemConfig .searchBox .searchList .el-form-item__content>.el-input .el-input__inner {
+    width: 150px;
+    display: block;
+}
+
+.SystemConfig .searchBox .searchList .el-form-item__content>.el-select {
+    float: left;
+    width: 160px;
+    padding-left: 10px;
+}
+
+.SystemConfig .searchBox .searchList .el-form-item__content>.el-cascader.el-cascader--mini {
+    padding-left: 10px;
+    width: 160px;
+}
+
+
+/* .Config .el-input--mini .el-input__inner {
+    width: 140px;
+} */
+
+
+/* .SystemConfig  */
+
+
+/* .Config .el-input--mini {
+    padding: 0 5px;
+    width: 145px;
+} */
+
+.SystemConfig .el-step__title {
+    font-size: 14px;
+    line-height: 38px;
+}
+
+.SystemConfig .el-table td,
+.el-table th {
+    padding: 6px 0;
+}
+
+
+/*表单验证里的单选框*/
+
+.SystemConfig .searchList .el-radio-group {
+    padding-left: 10px;
+}
+
+.SystemConfig .searchList .el-radio+.el-radio {
+    margin-left: 5px;
+}
+
+.SystemConfig .searchList .el-radio__label {
+    font-size: 12px;
+    padding-left: 5px;
+}
+
+
+/*控制器*/
+
+
+/*关联雾灯编码*/
+
+.Controller .lampAddress .lampLabel {
+    float: left;
+    font-size: 12px;
+    color: #666;
+}
+
+.Controller .lampAddress .lampPoint {
+    float: left;
+    color: #666;
+}
+
+.Controller .lampAddress .searchList li {
+    width: auto !important;
+}
+
+.Controller .lampAddress .searchList li.lampBtn {
+    padding-left: 100px !important;
+}
+
+.Controller .lampAddress .searchList li.lampBtn button {
+    padding: 4px 15px !important;
+}
+
+.Controller .unit {
+    font-size: 12px;
+    color: #666;
+}
+
+.Controller .searchBox .searchList {
+    min-height: 35px;
+}
+
+
+/* .Controller .el-input--mini .el-input__inner {
+    width: 120px;
+} */
+
+
+/*配置完成*/
+
+.ConfigStata.changeTxetBox {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.ConfigStata.changeTxetBox .text {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    display: inline-block;
+    width: 300px;
+    height: 50px;
+    font-size: 20px;
+    color: #666;
+}
+
+
+/*操作日志*/
+
+.OperationLog.grid .searchBox .searchList {
+    min-height: 60px;
+}
+
+.OperationLog.grid .searchBox .searchList li {
+    width: 21%;
+}
+
+.OperationLog.grid .searchBox .searchList li.time {
+    width: 36% !important;
+}
+
+.OperationLog .time .el-date-editor--daterange.el-input__inner,
+.OperationLog .time .el-date-editor--datetimerange.el-input__inner {
+    margin-left: 10px;
+    width: 330px !important;
+}
+
+
+/* .OperationLog .time .el-date-editor--datetimerange .el-range-input {
+    width: 220px !important;
+} */
+
+.OperationLog.grid .searchBox .searchList li.btn {
+    width: auto;
+    /* margin-left: 64%; */
+}
+
+.OperationLog.grid .searchBox .searchList li .el-input,
+.OperationLog.grid .searchBox .searchList li .el-select {
+    /* padding-left: 10px; */
+    width: 160px;
+}
+
+.OperationLog .el-dialog .nameFormBox {
+    width: 100%;
+    overflow: auto;
+}
+
+.OperationLog .el-dialog .nameFormBox>li {
+    width: 34%;
+    float: left;
+}
+
+.OperationLog .el-dialog .el-dialog__body,
+.OperationLog .el-form-item--mini.el-form-item {
+    padding-bottom: 0 !important;
+}
+
+.OperationLog .dialog-footer {
+    padding-right: 10px !important;
+}
+
+.OperationLog .el-dialog .el-textarea.el-input--mini {
+    padding-left: 10px;
+    padding-right: 10px;
+    resize: none !important;
+}
+
+.OperationLog .el-dialog .el-form-item__content>.el-input.el-input--mini {
+    width: 200px !important;
+    padding-left: 10px !important;
+    padding-right: 10px;
+}
+
+
+/*系统日志*/
+
+.SystemLog.grid .searchBox .searchList li {
+    width: 22%;
+}
+
+.SystemLog.grid .searchBox .searchList li.time {
+    width: 40% !important;
+}
+
+.SystemLog .time .el-date-editor--daterange.el-input__inner,
+.SystemLog .time .el-date-editor--datetimerange.el-input__inner {
+    margin-left: 10px;
+    width: 330px !important;
+}
+
+
+/* .SystemLog .time .el-date-editor--datetimerange .el-range-input {
+    width: 220px !important;
+} */
+
+.SystemLog.grid .searchBox .searchList li.btn {
+    width: 16%;
+    /* margin-left: 90%; */
+}
+
+.SystemLog.grid .searchBox .searchList li .el-input,
+.SystemLog.grid .searchBox .searchList li .el-select {
+    /* padding-left: 10px; */
+    width: 160px;
+}
+
+.SystemLog .el-dialog .nameFormBox {
+    width: 100%;
+    overflow: auto;
+}
+
+.SystemLog .el-dialog .nameFormBox>li {
+    /* width: 50%; */
+    float: left;
+}
+
+.SystemLog .el-dialog .el-dialog__body,
+.SystemLog .el-form-item--mini.el-form-item {
+    padding-bottom: 0 !important;
+}
+
+.SystemLog .el-dialog .el-form-item__content>.el-input.el-input--mini {
+    width: 200px !important;
+}
+
+
+/*通信日志*/
+
+.BytesLog.grid .searchBox .searchList {
+    min-height: 90px;
+}
+
+.BytesLog.grid .searchBox .searchList li {
+    width: 22%;
+}
+
+.BytesLog.grid .searchBox .searchList li.time {
+    width: 55% !important;
+}
+
+.BytesLog .time .el-date-editor--daterange.el-input__inner,
+.BytesLog .time .el-date-editor--datetimerange.el-input__inner {
+    margin-left: 10px;
+    width: 520px;
+}
+
+.BytesLog .time .el-date-editor--datetimerange .el-range-input {
+    width: 220px !important;
+}
+
+.BytesLog.grid .searchBox .searchList li.btn {
+    width: auto;
+    margin-left: 67%;
+}
+
+.BytesLog .el-dialog .nameFormBox {
+    width: 100%;
+    overflow: auto;
+}
+
+.BytesLog .el-dialog .nameFormBox>li {
+    width: 33.3%;
+    float: left;
+}
+
+.BytesLog .el-dialog .el-dialog__body,
+.BytesLog .el-form-item--mini.el-form-item {
+    padding-bottom: 0 !important;
+}
+
+.BytesLog .dialog-footer {
+    padding-right: 10px !important;
+}
+
+.BytesLog .el-dialog .el-textarea.el-input--mini {
+    padding-left: 10px;
+    padding-right: 10px;
+    resize: none !important;
+}
+
+.BytesLog .el-dialog .el-form-item--mini.el-form-item {
+    margin-bottom: 10px;
+}
+
+.BytesLog .el-dialog .el-form-item__content>.el-input.el-input--mini {
+    width: 200px !important;
+}
+
+
+/*人员管理*/
+
+.Person.grid .searchBox .searchList {
+    min-height: 90px;
+}
+
+.Person.grid .searchBox .searchList li .el-input,
+.Person.grid .searchBox .searchList li .el-cascader.el-cascader--mini,
+.Person.grid .searchBox .searchList li .el-select {
+    /* padding-left: 10px; */
+    width: 160px !important;
+}
+
+.Person .el-dialog .el-form-item__content>.el-cascader.el-cascader--mini,
+.Person .el-dialog .el-form-item__content>.el-input.el-input--mini,
+.Person .el-dialog .el-form-item__content>.el-select.el-select--mini {
+    padding-left: 10px !important;
+    padding-right: 10px;
+    width: 200px !important;
+}
+
+.Person .el-dialog .dialoginp {
+    height: 42px;
+}
+
+.Person .personImg {
+    width: 240px;
+    height: 116px;
+    margin-left: 20px;
+}
+
+.Person .personImg img {
+    width: 100%;
+    height: 100%;
+}
+
+.Person .el-dialog .el-form-item.updateImg .el-input.el-input--mini {
+    width: auto !important;
+}
+
+
+/*角色管理*/
+
+.Role .bana-information {
+    border-radius: 5px;
+}
+
+.Role .el-dialog .el-checkbox-group {
+    padding-left: 24px;
+}
+
+.Role .el-dialog .el-checkbox-group .el-checkbox {
+    width: 142px;
+}
+
+.Role .el-dialog .el-checkbox {
+    margin-left: 20px;
+}
+
+.Role .el-dialog .el-input.el-input--mini {
+    width: 165px !important;
+}
+
+.Role .el-dialog .el-form {
+    overflow: auto;
+}
+
+.Role .el-dialog .nameFormBox {
+    width: 100%;
+    overflow: auto;
+}
+
+.Role .el-dialog .nameFormBox>li {
+    width: 50%;
+    float: left;
+}
+
+.Role .el-dialog .modelFormBox>li {
+    margin-top: 5px;
+}
+
+.Role .el-dialog .countFormBox {
+    width: 100%;
+    float: left;
+    overflow: auto;
+    margin-top: 5px;
+}
+
+.Role .functionBox.bana-information {
+    padding: 0;
+}
+
+.Role .functionBox.bana-information .bana-information-content {
+    overflow: auto;
+    min-height: 80px;
+    max-height: 300px;
+}
+
+.Role .functionBox .bana-information-content ul {
+    padding-top: 10px;
+}
+
+.Role .functionBox .bana-information-content ul li {
+    padding-top: 5px;
+}
+
+.Role .bana-information .bana-title {
+    font-size: 12px !important;
+}
+
+.Role .el-dialog .userBox {
+    float: left;
+    margin-top: 10px;
+}
+
+
+/*机构管理*/
+
+.Department .leftBox {
+    width: 30%;
+    font-size: 13px;
+    float: left;
+}
+
+.Department .leftBox .el-input__inner {
+    width: 80%;
+    margin-left: 4%;
+    height: 25px;
+}
+
+.Department .lefttitle {
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    background-color: ivory;
+}
+
+.Department .lefttitle span {
+    margin-left: 10px;
+    color: #666;
+}
+
+.Department .leftbtn {
+    float: right;
+    margin-right: 3%;
+    margin-top: 5px;
+}
+
+.Department .lefttree {
+    margin-top: 80px;
+    margin-left: 10px;
+}
+
+.Department .rightBox {
+    width: 70%;
+    font-size: 13px;
+    float: left;
+    border-left: 1px solid #ddd;
+}
+
+.Department .righttitle {
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    background-color: ivory;
+}
+
+.Department .righttitle span {
+    margin-left: 10px;
+    color: #666;
+}
+
+.Department .rightBox .tableone {
+    /* border: 1px solid gray; */
+    border-collapse: collapse;
+    width: 100%;
+    text-align: left;
+    float: left;
+}
+
+.Department .rightBox .tableone td {
+    border: 1px solid #ddd;
+    margin-left: 5px;
+    text-align: left;
+    padding: 5px 10px;
+    color: #666;
+}
+
+.Department .el-dialog .el-form-item__content>.el-input.el-input--mini {
+    padding-left: 10px !important;
+    padding-right: 10px;
+    width: 180px !important;
+}
+
+.Department .el-dialog .el-form-item__content>.el-select.el-select--mini {
+    padding-left: 10px !important;
+    padding-right: 10px;
+    width: 180px !important;
+}
+
+.Department .el-form-item__content>.el-cascader.el-cascader--mini {
+    padding-left: 10px !important;
+    padding-right: 10px;
+    width: 180px !important;
+}
+
+.Department .el-dialog .dialoginp {
+    height: 42px;
+}
+
+
+/*下发页面初始参数*/
+/*下发设备初始参数*/
+.initialdevice .light_top_box {
+    width: 100%;
+    height: 100px;
+    border: 1px solid #ddd;
+    padding-top: 10px;
+}
+.initialdevice .light_top_box .el-form-item.is-required,
+.initialdevice .light_top_box .el-form-item {
+  display: inline-block;
+}
+.initialdevice .light_bottom_box .light_bottom_box_content .nameFormBox>li .el-form-item__content>.el-form-item__error,
+.initialdevice .light_bottom_box .light_bottom_box_content .nameFormBox>li .el-form-item__content>.el-select,
+.initialdevice .light_bottom_box .light_bottom_box_content .nameFormBox>li .el-form-item__content>.el-input,
+.initialdevice .light_top_box .el-form-item__content>.el-select,
+.initialdevice .light_top_box .el-form-item__content>.el-input {
+  padding-left: 10px !important;
+}
+.initialdevice .light_bottom_box .light_bottom_box_content .nameFormBox>li .el-form-item__content>.el-select .el-input__inner,
+.initialdevice .light_bottom_box .light_bottom_box_content .nameFormBox>li .el-form-item__content>.el-input .el-input__inner,
+.initialdevice .light_top_box .el-form-item__content>.el-select .el-input .el-input__inner,
+.initialdevice .light_top_box .el-form-item__content>.el-input .el-input__inner {
+  width: 180px;
+  display: block;
+}
+
+.initialdevice .light_bottom_box {
+  width: 100%;
+  /* height: 500px; */
+  border: 1px solid #ddd;
+  margin-top: 10px;
+}
+.initialdevice .light_bottom_box .light_bottom_box_title {
+    width: 100%;
+    height: 36px;
+    background: #eaf0fd;
+    border-bottom: 1px solid #d9d9d9;
+    font-size: 13px;
+    line-height: 36px;
+    color: #323232;
+    text-indent: 20px;
+    text-align: left;
+}
+.initialdevice .light_bottom_box .light_bottom_box_content {
+    padding: 20px;
+    overflow:auto;
+}
+.initialdevice .light_bottom_box .light_bottom_box_content .el-form-item {
+    display: inline-block;
+}
+
+.initialdevice .light_bottom_box .light_bottom_box_content .nameFormBox {
+  width: 100%;
+  overflow: auto;
+}
+
+.initialdevice .light_bottom_box .light_bottom_box_content .nameFormBox>li {
+  width: 33%;
+  float: left;
+}
+.initialdevice .el-tabs {
+  margin-top: 10px;
+}
+
+.initialdevice .el-dialog .el-form-item__content>.el-input.el-input--mini,
+.initialdevice .el-dialog .el-form-item__content>.el-select.el-select--mini {
+  width: 180px !important;
+}
+
+.initialdevice.grid .gridBox {
+    /* width: 99.5%; */
+    box-sizing: border-box;
+    /* padding: 0 20px; */
+}
+
+.initialdevice .controllInfo {
+    margin-bottom: 10px;
+}
+
+
+/* .initialdevice .el-dialog .el-input {
+    width: 165px !important;
+    padding-left: 10px !important;
+} */
+
+.initialdevice .el-dialog .el-form {
+    overflow: auto;
+}
+
+.initialdevice .el-dialog .nameFormBox {
+    width: 100%;
+    overflow: auto;
+}
+
+.initialdevice .el-dialog .nameFormBox>li {
+    width: 33%;
+    float: left;
+}
+
+.initialdevice .visibleControll,
+.wdCons {
+    overflow: auto;
+}
+
+.initialdevice .bana-informations {
+    margin-top: 5px;
+    width: 100%;
+    min-height: 55px;
+    position: relative;
+    float: left;
+    border-width: 1px;
+    border-style: solid;
+    border: 1px solid #dcdcdc;
+    border-color: rgb(220, 220, 220);
+    -o-border-image: initial;
+    border-image: initial;
+    padding: 15px 10px;
+    color: #666;
+}
+
+.initialdevice .bana-titles {
+    position: absolute;
+    height: 30px;
+    background: #fff;
+    top: -15px;
+    left: 15px;
+    padding: 5px 10px;
+    line-height: 20px;
+    color: #666;
+}
+
+.initialdevice .bana-information {
+    margin-top: 15px;
+    width: 100%;
+    min-height: 375px;
+    position: relative;
+    float: left;
+    border-width: 1px;
+    border-style: solid;
+    border: 1px solid #dcdcdc;
+    border-color: rgb(220, 220, 220);
+    -o-border-image: initial;
+    border-image: initial;
+    padding: 15px 10px;
+    color: #666;
+}
+
+.initialdevice .bana-title {
+    position: absolute;
+    height: 30px;
+    background: #fff;
+    top: -15px;
+    left: 15px;
+    padding: 5px 10px;
+    line-height: 20px;
+    color: #666;
+}
+
+.initialdevice .bana-box {
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.initialdevice .searchBox .searchList {
+    padding-left: 20px;
+}
+
+.initialdevice .searchBox .searchList li .el-input {
+    width: 200px !important;
+}
+
+
+/* 控制策略配置 */
+
+.ControlStrategy .headerTitle {
+    font-size: 14px;
+}
+
+.ControlStrategy .el-menu {
+    border-right: none;
+}
+
+.ControlStrategy .contentBox {
+    padding: 20px;
+}
+
+.ControlStrategy .itemBox {
+    padding: 10px 0;
+}
+
+.ControlStrategy .el-form-item__content {
+    padding-left: 10px;
+}
+
+.ControlStrategy .el-select {
+    width: 100%;
+}
+
+.ControlStrategy .el-form-item {
+    width: 50%;
+    float: left;
+}
+
+.SolutionConfig .el-menu--horizontal {
+    float: left;
+}
+
+.SolutionConfig .el-menu--horizontal>.el-menu-item.is-active {
+    color: #409EFF;
+}
+/* 串口调试助手 */
+.SerialPort .searchBox{
+    padding-left: 20px;
+}
+
+.SerialPort .contentBox {
+    padding: 20px;
+}
+.SerialPort .contentBox .boxCardLeft .el-card__body{
+    padding: 0 !important;
+}
+.SerialPort .contentBox .el-card__header{
+    padding: 10px 20px !important;
+}
+.SerialPort .contentBox .el-card__body .lamp li{
+    width: 48%;
+    float: left;
+}
+.SerialPort .contentBox .el-card__body .lamp li .el-input {
+    width: 80%;
+}
+.SerialPort .contentBox .el-card__body .lamp li .el-select{
+    width: 100%;
+}
+/* .SerialPort .contentBox .el-card__body .lamp li .el-input .el-input__inner{
+    width: 200px;
+} */
+.SerialPort .contentBox .el-card__body .lamp li .unit{
+    width: 20% !important;
+}
+.User .el-dialog .el-form-item__content>.el-cascader.el-cascader--mini{
+    padding-left: 10px !important;
+    padding-right: 10px;
+    width: 200px !important;
+}

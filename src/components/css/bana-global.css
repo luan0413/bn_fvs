@@ -1,0 +1,228 @@
+/*init*/
+
+@charset "utf-8";
+* {
+    box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+blockquote,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+pre,
+form,
+fieldset,
+legend,
+button,
+input,
+textarea,
+th,
+td {
+    margin: 0;
+    padding: 0;
+}
+
+input,
+img {
+    border: 0;
+}
+
+body,
+button,
+input,
+select,
+textarea,
+p {
+    font: 12px "Microsoft YaHei";
+    resize: none !important;
+    outline: none !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+    font: 14px "Microsoft YaHei";
+}
+
+address,
+cite,
+dfn,
+em,
+var {
+    font-style: normal;
+}
+
+a,
+span,
+input {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:hover,
+checkbox {
+    cursor: pointer;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+table th {
+    text-align: right;
+    padding-right: 10px;
+}
+
+fieldset {
+    border: none;
+    display: inline-block;
+}
+
+
+/* @font-face {font-family: 'HelveticaRegular';font-weight: normal;font-style: normal;} */
+
+input[type="password"]::-ms-reveal {
+    display: none;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    cursor: pointer;
+}
+
+input[type="text"],
+input[type="number"] {
+    padding: 0 5px;
+}
+
+.fl {
+    float: left !important;
+}
+
+.fr {
+    float: right !important;
+}
+
+.of {
+    overflow: auto !important;
+}
+
+.wall {
+    width: 100% !important;
+}
+
+.w10b {
+    width: 10% !important;
+}
+
+.w20b {
+    width: 20% !important;
+}
+
+.w200 {
+    width: 200px !important;
+}
+
+.hauto {
+    height: auto !important;
+}
+
+.noborder {
+    border: none !important;
+}
+
+.mt10b {
+    margin-top: 10% !important;
+}
+
+.mt0 {
+    margin-top: 0px !important;
+}
+
+.mt5 {
+    margin-top: 5px !important;
+}
+
+.mt10 {
+    margin-top: 10px !important;
+}
+
+.mt20 {
+    margin-top: 20px !important;
+}
+
+.mt30 {
+    margin-top: 30px !important;
+}
+
+.mt50 {
+    margin-top: 50px !important;
+}
+
+.ml60b {
+    margin-left: 60% !important;
+}
+
+.ml20 {
+    margin-left: 20px !important;
+}
+
+.ml10 {
+    margin-left: 10px !important;
+}
+
+.ml50 {
+    margin-left: 50px !important;
+}
+
+.ml100 {
+    margin-left: 100px !important;
+}
+
+.mr10 {
+    margin-right: 10px !important;
+}
+
+.mr20 {
+    margin-right: 20px !important;
+}
+
+.mr50 {
+    margin-right: 50px !important;
+}
+
+.mr100 {
+    margin-right: 100px !important;
+}
+.mb20 {
+    margin-bottom: 20px !important;
+}
+.input-small {
+    width: 50px !important;
+}

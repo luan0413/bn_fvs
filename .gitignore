@@ -1,0 +1,16 @@
+/node_modules
+/BANA_FVS.sln
+/BANA_FVS_Vue.vcxproj
+/BANA_FVS_Vue.vcxproj.filters
+/BANA_FVS_Vue.vcxproj.user
+/x64
+/fvs
+/.vs/BANA_FVS/v15/.suo
+/.vs/BANA_FVS/v15/Browse.VC.db
+/.vs/BANA_FVS/v15/Browse.VC.opendb
+/.vscode
+/build
+/.vs/ProjectSettings.json
+/.vs/VSWorkspaceState.json
+/.vs/config/applicationhost.config
+/.vs/slnx.sqlite

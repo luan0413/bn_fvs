@@ -1,0 +1,193 @@
+/*雾灯故障统计*/
+
+.DeviceStatistics .echartsBarBox {
+    width: 100%;
+    padding: 20px;
+    background: #fff;
+}
+
+.DeviceStatistics .echartsPieBox {
+    width: 100%;
+    padding: 20px;
+    padding-top: 0;
+    padding-bottom: 0;
+    background: #fff;
+}
+
+.DeviceStatistics .echartsPieBox .echartsPieBoxs {
+    /* border: 1px solid #ebeef5; */
+    border: 1px solid #ddd;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.DeviceStatistics .echartsPieBox .echartsPieBoxs .echartsPieTitle {
+    width: 100%;
+    height: 30px;
+    padding-left: 5px;
+    line-height: 30px;
+    font-size: 18px;
+    color: #333;
+    font-weight: bold;
+}
+
+.DeviceStatistics .echartsPieBox .echartsPieBoxs .echartsPieBoxItem {
+    flex-grow: 1;
+    width: 100%;
+    padding: 10px;
+    overflow: auto;
+}
+
+
+/* .pointData */
+
+.el-table::before {
+    background-color: transparent;
+}
+
+
+/* .el-table td {
+    border-bottom: 1px solid #ddd;
+} */
+
+.DeviceStatistics .tableBoxs {
+    width: 100%;
+    overflow: auto;
+    padding: 5px 10px;
+}
+
+.DeviceStatistics .tableBoxs .item {
+    width: 50%;
+    float: left;
+}
+
+.DeviceStatistics .tableBoxs .item .itemTitle {
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 12px;
+    border: 1px solid #ebeef5;
+    background: #ecf5ff;
+    box-sizing: border-box;
+}
+
+.DeviceStatistics .tableBoxs .item .itemContent {
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    font-size: 12px;
+    border-bottom: 1px solid #ebeef5;
+    border-left: 1px solid #ebeef5;
+    box-sizing: border-box;
+}
+
+.DeviceStatistics .tableBoxs .item .itemContent.borderR {
+    border-right: 1px solid #ebeef5;
+}
+
+
+/*雾区能见度统计*/
+
+.FogAreaStatistics .searchBox {
+    width: 100%;
+    min-height: 60px;
+    border-bottom: 1px solid #ddd;
+}
+
+.FogAreaStatistics .searchBox .searchList {
+    width: 100%;
+    min-height: 45px;
+    padding-top: 15px;
+}
+
+.FogAreaStatistics .searchBox .searchList li {
+    width: 20%;
+    height: 30px;
+    float: left;
+}
+
+.FogAreaStatistics .searchBox .searchList li.time {
+    width: 40% !important;
+}
+
+.FogAreaStatistics .time .el-date-editor--daterange.el-input__inner,
+.FogAreaStatistics .time .el-date-editor--datetimerange.el-input__inner {
+    margin-left: 10px;
+}
+
+.FogAreaStatistics .searchBox .searchList li.btn {
+    width: 10%;
+}
+
+.FogAreaStatistics .searchBox .searchList li .el-input,
+.FogAreaStatistics .searchBox .searchList li .el-select {
+    padding-left: 10px;
+}
+
+.FogAreaStatistics .searchBox .searchList li.w265 {
+    padding-top: 2px;
+    width: 320px !important;
+}
+
+.FogAreaStatistics .searchBox .searchList li.w265 .el-select {
+    width: 265px !important;
+}
+
+.FogAreaStatistics .contentBox {
+    width: 100%;
+    padding: 20px;
+}
+
+.FogAreaStatistics .contentBox .echartsBox {
+    width: 68%;
+    height: 100%;
+    float: left;
+    padding-left: 0;
+    padding-top: 10%;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+}
+
+.FogAreaStatistics .contentBox .tableBox {
+    width: 32%;
+    height: 100%;
+    float: left;
+    padding-right: 20px;
+}
+
+.FogAreaStatistics .tableBoxs {
+    width: 100%;
+    overflow: auto;
+    padding: 5px 10px;
+}
+
+.FogAreaStatistics .tableBoxs .item {
+    width: 50%;
+    float: left;
+}
+
+.FogAreaStatistics .tableBoxs .item .itemTitle {
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 12px;
+    border: 1px solid #ebeef5;
+    background: #ecf5ff;
+    box-sizing: border-box;
+}
+
+.FogAreaStatistics .tableBoxs .item .itemContent {
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    font-size: 12px;
+    border-bottom: 1px solid #ebeef5;
+    border-left: 1px solid #ebeef5;
+    box-sizing: border-box;
+}
+
+.FogAreaStatistics .tableBoxs .item .itemContent.borderR {
+    border-right: 1px solid #ebeef5;
+}
