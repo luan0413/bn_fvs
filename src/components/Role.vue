@@ -51,7 +51,7 @@
       </div>
     </section>
     <!--新增,编辑弹窗-->
-    <el-dialog :title="title" :visible.sync="roleDialog" height="580px" width="580px" top="50px">
+    <el-dialog :title="title" :visible.sync="roleDialog" :close-on-click-modal='false' height="580px" width="580px" top="50px">
       <div>
         <el-form :model="role" :rules="roleRules" ref="newRoleForm" label-width="80px" size="mini">
           <ul class="nameFormBox">

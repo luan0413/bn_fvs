@@ -983,7 +983,7 @@
 /*下发设备初始参数*/
 .initialdevice .light_top_box {
     width: 100%;
-    height: 100px;
+    height: 110px;
     border: 1px solid #ddd;
     padding-top: 10px;
 }
@@ -991,6 +991,7 @@
 .initialdevice .light_top_box .el-form-item {
   display: inline-block;
 }
+.initialdevice .light_top_box .el-form-item__content>.el-form-item__error,
 .initialdevice .light_bottom_box .light_bottom_box_content .nameFormBox>li .el-form-item__content>.el-form-item__error,
 .initialdevice .light_bottom_box .light_bottom_box_content .nameFormBox>li .el-form-item__content>.el-select,
 .initialdevice .light_bottom_box .light_bottom_box_content .nameFormBox>li .el-form-item__content>.el-input,

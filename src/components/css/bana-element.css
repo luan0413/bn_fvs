@@ -296,6 +296,7 @@
 }
 .combine-table .el-table tr td>div.cell .cell-content {
     padding: 6px 15px !important;
+    height: 30px;
     border-bottom: 1px solid #ebeef5;
 }
 

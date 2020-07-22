@@ -141,7 +141,7 @@
     </div>
 
 
-    <el-dialog :title="$t('message.Update')+$t('message.LampAddress')" :visible.sync="addAddressDialog" width="460px">
+    <el-dialog :title="$t('message.Update')+$t('message.LampAddress')" :visible.sync="addAddressDialog" :close-on-click-modal='false' width="460px">
       <span>
         <div>
           <el-radio-group v-model="lampAddress.type">
@@ -376,11 +376,11 @@
       },
       //添加雾灯地址
       addAddress() {
-        if (parseInt(this.lampAddress.ksdz) <= 0 ||
+        if (parseInt(this.lampAddress.ksdz) < 0 ||
           parseInt(this.lampAddress.jsdz) <= 0 ||
           parseInt(this.lampAddress.ksdz) > 9999 ||
-          parseInt(this.lampAddress.jsdz) > 9999) {
-          this.$alert("雾灯地址必须在1-9999之间", '编辑雾灯地址', {
+          parseInt(this.lampAddress.jsdz) >= 9999) {
+          this.$alert("雾灯地址必须在0-9999之间", '编辑雾灯地址', {
             confirmButtonText: '确定'
           });
           return;

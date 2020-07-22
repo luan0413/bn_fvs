@@ -67,7 +67,7 @@
         </el-pagination>
       </div>
       </section>
-      <el-dialog title="详情" :visible.sync="logDialog" width="800px">
+      <el-dialog title="详情" :visible.sync="logDialog" :close-on-click-modal='false' width="800px">
         <div style="padding-bottom: 0;">
           <el-form :model="log" ref="logForm" label-width="80px" size="mini">
             <ul class="nameFormBox log">
@@ -105,7 +105,7 @@
           <el-button type="primary" @click="confirm" size="mini">{{ $t('message.Sure') }}</el-button>
         </span>
       </el-dialog>
-      <el-dialog :title="socketLogsTitle" :visible.sync="socketLogsDialog" width="1000px">
+      <el-dialog :title="socketLogsTitle" :visible.sync="socketLogsDialog" :close-on-click-modal='false' width="1000px">
         <div>
           <el-table :data="socketLogsData" style="width: 100%" max-height="348">
             <el-table-column align="center" prop="protocolId" label="协议编号:" min-width="100"></el-table-column>
@@ -133,7 +133,7 @@
         </span>
       </el-dialog>
       <!-- 通信日志弹窗 -->
-      <el-dialog :title="bytesLogTitle" :visible.sync="bytesLogDialog" width="600px">
+      <el-dialog :title="bytesLogTitle" :visible.sync="bytesLogDialog" :close-on-click-modal='false' width="600px">
         <div style="padding-bottom: 0;">
           <el-form :model="bytesLog" ref="logForm" label-width="80px" size="mini">
             <ul class="nameFormBox log">

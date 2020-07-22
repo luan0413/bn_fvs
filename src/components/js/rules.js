@@ -47,6 +47,9 @@ let filterRules = (name, flag, maxLength, minLength, type) => {
             case 'hjyl': //号角音量
                 rules.push({ pattern: /^(10|[0-9])$/, message: '号角音量必须在0-10之间', trigger: 'blur' });
                 break;
+            case 'qrcs': //确认次数
+                rules.push({ pattern: /^(([1-9]\d?)|(1[01]\d)|(120)|(121)|(122)|(123)|(124)|(125)|(126)|(127)|)(\.\d*)?$/, message:  name + '必须在1-127之间', trigger: 'blur' });
+                break;
             case 'alarm': //警示灯
                 // rules.push({ pattern: /^(110|10\d|[1-9]\d|\d)$/, message: '警示灯数量必须在0-99之间', trigger: 'blur' });
                 rules.push({ pattern: /^([0-9]|[1-4]\d|50)$/, message: '警示灯数量组必须在0-50之间', trigger: 'blur' });

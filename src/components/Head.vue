@@ -19,7 +19,7 @@
       <el-menu-item index="3" :style="{display: StatisticalAnalysisDis}">{{ $t('message.StatisticalAnalysis') }}</el-menu-item>
       <el-menu-item index="4" :style="{display: SystemConfigDis}">{{ $t('message.SystemConfig') }}</el-menu-item>
     </el-menu>
-    <el-dialog :title="$t('message.UpdatePassword')" :visible.sync="updatePasswordDialog" width="300px">
+    <el-dialog :title="$t('message.UpdatePassword')" :visible.sync="updatePasswordDialog" :close-on-click-modal='false' width="300px">
       <span>
         <el-form :model="pwd" :rules="pwdRules" ref="pwdForm" label-width="80px" size="mini">
           <el-form-item :label="$t('message.OldPassword')" prop="oldDlmm">

@@ -548,7 +548,7 @@
         </div>
       </section>
       <!-- 按钮弹窗 -->
-      <el-dialog :title="$t('message.FogAreaController')" :visible.sync="setdialog" width="1100px">
+      <el-dialog :title="$t('message.FogAreaController')" :visible.sync="setdialog" :close-on-click-modal='false' width="1100px">
         <template>
           <el-row>
             <el-col :span="24">

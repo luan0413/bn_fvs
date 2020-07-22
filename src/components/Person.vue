@@ -79,7 +79,7 @@
     </section>
     <!-- 新增人员弹窗 -->
     <div class="newUserdialog">
-      <el-dialog :title="dialogTitle" :visible.sync="dialogVisible" width="600px">
+      <el-dialog :title="dialogTitle" :visible.sync="dialogVisible" :close-on-click-modal='false' width="600px">
         <el-form :inline="true" :model="person" :rules="personRules" ref="personForm" size="mini" label-width="70px">
           <el-row>
             <el-col :span="12">

@@ -69,7 +69,7 @@
         </el-pagination>
       </div>
       </section>
-      <el-dialog :title="$t('message.Details')" :visible.sync="logDialog" width="600px">
+      <el-dialog :title="$t('message.Details')" :visible.sync="logDialog" :close-on-click-modal='false' width="600px">
         <div style="padding-bottom: 0;">
           <el-form :model="log" ref="logForm" label-width="80px" size="mini">
             <ul class="nameFormBox log">

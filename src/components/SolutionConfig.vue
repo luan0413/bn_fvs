@@ -104,33 +104,17 @@
                   <template slot-scope="scope">
                     <div>
                       <div class="cell-content">
-                          1
+                        1
                         <!-- {{addZero(scope.row.startHour1)+":"+addZero(scope.row.startMinute1)+"-"+addZero(scope.row.stopHour1)+":"+addZero(scope.row.stopMinute1)}} -->
                         <!-- 18:50-18:50 -->
                       </div>
                       <div class="cell-content">
-                          2
+                        2
                         <!-- {{addZero(scope.row.startHour2)+":"+addZero(scope.row.startMinute2)+"-"+addZero(scope.row.stopHour2)+":"+addZero(scope.row.stopMinute2)}} -->
                       </div>
                       <div class="cell-content">
-                          3
+                        3
                         <!-- {{addZero(scope.row.startHour3)+":"+addZero(scope.row.startMinute3)+"-"+addZero(scope.row.stopHour3)+":"+addZero(scope.row.stopMinute3)}} -->
-                      </div>
-                    </div>
-                  </template>
-                </el-table-column>
-                <el-table-column label="日期" align="center" show-overflow-tooltip min-width="100">
-                  <template slot-scope="scope">
-                    <div>
-                      <div class="cell-content">
-                        {{scope.row.month1+":"+scope.row.day1}}
-                        <!-- 10:10 -->
-                      </div>
-                      <div class="cell-content">
-                        {{scope.row.month2+":"+scope.row.day2}}
-                      </div>
-                      <div class="cell-content">
-                        {{scope.row.month3+":"+scope.row.day3}}
                       </div>
                     </div>
                   </template>
@@ -139,14 +123,14 @@
                   <template slot-scope="scope">
                     <div>
                       <div class="cell-content">
-                        {{addZero(scope.row.startHour1)+":"+addZero(scope.row.startMinute1)}}
+                        {{scope.row.readSuccess1 ? (addZero(scope.row.startHour1)+":"+addZero(scope.row.startMinute1)) : ""}}
                         <!-- 18:20 -->
                       </div>
                       <div class="cell-content">
-                        {{addZero(scope.row.startHour2)+":"+addZero(scope.row.startMinute2)}}
+                        {{scope.row.readSuccess2 ? (addZero(scope.row.startHour2)+":"+addZero(scope.row.startMinute2)) : ""}}
                       </div>
                       <div class="cell-content">
-                        {{addZero(scope.row.startHour3)+":"+addZero(scope.row.startMinute3)}}
+                        {{scope.row.readSuccess3 ? (addZero(scope.row.startHour3)+":"+addZero(scope.row.startMinute3)) : ""}}
                       </div>
                     </div>
                   </template>
@@ -155,13 +139,13 @@
                   <template slot-scope="scope">
                     <div>
                       <div class="cell-content">
-                        {{addZero(scope.row.stopHour1)+":"+addZero(scope.row.stopMinute1)}}
+                        {{scope.row.readSuccess1 ? (addZero(scope.row.stopHour1)+":"+addZero(scope.row.stopMinute1)) : ""}}
                       </div>
                       <div class="cell-content">
-                        {{addZero(scope.row.stopHour2)+":"+addZero(scope.row.stopMinute2)}}
+                        {{scope.row.readSuccess2 ? (addZero(scope.row.stopHour2)+":"+addZero(scope.row.stopMinute2)) : ""}}
                       </div>
                       <div class="cell-content">
-                        {{addZero(scope.row.stopHour3)+":"+addZero(scope.row.stopMinute3)}}
+                        {{scope.row.readSuccess3 ? (addZero(scope.row.stopHour3)+":"+addZero(scope.row.stopMinute3)) : ""}}
                       </div>
                     </div>
                   </template>
@@ -170,15 +154,15 @@
                   <template slot-scope="scope">
                     <div>
                       <div class="cell-content">
-                        {{scope.row.wdkz1sm}}
+                        {{scope.row.readSuccess1 ? (scope.row.wdkz1sm) : ""}}
                         <!-- {{(scope.row.wdkz1>=1 && scope.row.wdkz1<=7) ? getwdkzCodes(scope.row.wdkz1) : '一'}} -->
                       </div>
                       <div class="cell-content">
-                        {{scope.row.wdkz2sm}}
+                        {{scope.row.readSuccess2 ? (scope.row.wdkz2sm) : ""}}
                         <!-- {{(scope.row.wdkz2>=1 && scope.row.wdkz2<=7) ? getwdkzCodes(scope.row.wdkz2) : '一'}} -->
                       </div>
                       <div class="cell-content">
-                        {{scope.row.wdkz3sm}}
+                        {{scope.row.readSuccess3 ? (scope.row.wdkz3sm) : ""}}
                         <!-- {{(scope.row.wdkz3>=1 && scope.row.wdkz3<=7) ? getwdkzCodes(scope.row.wdkz3) : '一'}} -->
                       </div>
                     </div>
@@ -188,13 +172,13 @@
                   <template slot-scope="scope">
                     <div>
                       <div class="cell-content">
-                        {{scope.row.wdld1}}
+                        {{scope.row.readSuccess1 ? (scope.row.wdld1) : ""}}
                       </div>
                       <div class="cell-content">
-                        {{scope.row.wdld2}}
+                        {{scope.row.readSuccess2 ? (scope.row.wdld2) : ""}}
                       </div>
                       <div class="cell-content">
-                        {{scope.row.wdld3}}
+                        {{scope.row.readSuccess3 ? (scope.row.wdld3) : ""}}
                       </div>
                     </div>
                   </template>
@@ -203,13 +187,13 @@
                   <template slot-scope="scope">
                     <div>
                       <div class="cell-content">
-                        {{scope.row.zkb1sm}}
+                        {{scope.row.readSuccess1 ? (scope.row.zkb1sm) : ""}}
                       </div>
                       <div class="cell-content">
-                        {{scope.row.zkb2sm}}
+                        {{scope.row.readSuccess2 ? (scope.row.zkb2sm) : ""}}
                       </div>
                       <div class="cell-content">
-                        {{scope.row.zkb3sm}}
+                        {{scope.row.readSuccess3 ? (scope.row.zkb3sm) : ""}}
                       </div>
                     </div>
                   </template>
@@ -218,13 +202,13 @@
                   <template slot-scope="scope">
                     <div>
                       <div class="cell-content">
-                        {{scope.row.hdys1}}
+                        {{scope.row.readSuccess1 ? (scope.row.hdys1) : ""}}
                       </div>
                       <div class="cell-content">
-                        {{scope.row.hdys2}}
+                        {{scope.row.readSuccess2 ? (scope.row.hdys2) : ""}}
                       </div>
                       <div class="cell-content">
-                        {{scope.row.hdys3}}
+                        {{scope.row.readSuccess3 ? (scope.row.hdys3) : ""}}
                       </div>
                     </div>
                   </template>
@@ -233,13 +217,13 @@
                   <template slot-scope="scope">
                     <div>
                       <div class="cell-content">
-                        {{scope.row.mqys1}}
+                        {{scope.row.readSuccess1 ? (scope.row.mqys1) : ""}}
                       </div>
                       <div class="cell-content">
-                        {{scope.row.mqys2}}
+                        {{scope.row.readSuccess2 ? (scope.row.mqys2) : ""}}
                       </div>
                       <div class="cell-content">
-                        {{scope.row.mqys3}}
+                        {{scope.row.readSuccess3 ? (scope.row.mqys3) : ""}}
                       </div>
                     </div>
                   </template>
@@ -248,13 +232,13 @@
                   <template slot-scope="scope">
                     <div>
                       <div class="cell-content">
-                        {{scope.row.hsjsdzsl1}}
+                        {{scope.row.readSuccess1 ? (scope.row.hsjsdzsl1) : ""}}
                       </div>
                       <div class="cell-content">
-                        {{scope.row.hsjsdzsl2}}
+                        {{scope.row.readSuccess2 ? (scope.row.hsjsdzsl2) : ""}}
                       </div>
                       <div class="cell-content">
-                        {{scope.row.hsjsdzsl3}}
+                        {{scope.row.readSuccess3 ? (scope.row.hsjsdzsl3) : ""}}
                       </div>
                     </div>
                   </template>
@@ -262,14 +246,30 @@
                 <el-table-column prop="sfsyxl" label="是否启用星历" align="center" show-overflow-tooltip min-width="100">
                   <template slot-scope="scope">
                     <div>
+                      <div class="cell-content" style="height: 30px;">
+                        {{scope.row.readSuccess1 ? (scope.row.sfsyxl1? '是':'否') : ""}}
+                      </div>
+                      <div class="cell-content" style="height: 30px;">
+                        {{scope.row.readSuccess2 ? (scope.row.sfsyxl2? '是':'否') : ""}}
+                      </div>
+                      <div class="cell-content" style="height: 30px;">
+                        {{scope.row.readSuccess3 ? (scope.row.sfsyxl3? '是':'否') : ""}}
+                      </div>
+                    </div>
+                  </template>
+                </el-table-column>
+                <el-table-column label="星历参考日期" align="center" show-overflow-tooltip min-width="100">
+                  <template slot-scope="scope">
+                    <div>
                       <div class="cell-content">
-                        {{scope.row.sfsyxl1? '是':'否'}}
+                        {{scope.row.readSuccess1 ? (scope.row.sfsyxl1? scope.row.month1+"月"+scope.row.day1+"日":"") : ""}}
+                        <!-- 10:10 -->
                       </div>
                       <div class="cell-content">
-                        {{scope.row.sfsyxl2? '是':'否'}}
+                        {{scope.row.readSuccess2 ? (scope.row.sfsyxl2? scope.row.month2+"月"+scope.row.day2+"日":"") : ""}}
                       </div>
                       <div class="cell-content">
-                        {{scope.row.sfsyxl3? '是':'否'}}
+                        {{scope.row.readSuccess3 ? (scope.row.sfsyxl3? scope.row.month3+"月"+scope.row.day3+"日":"") : ""}}
                       </div>
                     </div>
                   </template>
@@ -278,13 +278,13 @@
                   <template slot-scope="scope">
                     <div>
                       <div class="cell-content">
-                        {{scope.row.startHour1 ? '读取成功' : '读取失败'}}
+                        {{scope.row.readSuccess1 ? '读取成功' : '读取失败'}}
                       </div>
                       <div class="cell-content">
-                        {{scope.row.startHour2 ? '读取成功' : '读取失败'}}
+                        {{scope.row.readSuccess2 ? '读取成功' : '读取失败'}}
                       </div>
                       <div class="cell-content">
-                        {{scope.row.startHour3 ? '读取成功' : '读取失败'}}
+                        {{scope.row.readSuccess3 ? '读取成功' : '读取失败'}}
                       </div>
                     </div>
                   </template>
@@ -344,7 +344,7 @@
         </el-tab-pane> -->
       </el-tabs>
     </section>
-    <el-dialog :title="title" :visible.sync="programDialog" width="900px">
+    <el-dialog :title="title" :visible.sync="programDialog" :close-on-click-modal='false' width="900px">
       <el-form :model="program" :rules="programRules" ref="programForm" label-width="100px" size="mini">
         <div class="bana-information mt10 hauto">
           <div class="bana-title">{{ $t('message.BasicMessage') }}</div>
@@ -475,22 +475,22 @@
               </li>
               <li>
                 <el-form-item :label="$t('message.LightsONDuration')+'(ms)'" prop="ldsc" v-if="programItem.ldscxszt">
-                  <el-input v-model="programItem.ldsc" type="number" :disabled="controlDisabled"></el-input>
+                  <el-input v-model="programItem.ldsc" type="number" min="0" :disabled="controlDisabled"></el-input>
                 </el-form-item>
               </li>
               <li>
                 <el-form-item :label="$t('message.LightsOFFDuration')+'(ms)'" prop="mdsc" v-if="programItem.mdscxszt">
-                  <el-input v-model="programItem.mdsc" type="number" :disabled="controlDisabled"></el-input>
+                  <el-input v-model="programItem.mdsc" type="number" min="0" :disabled="controlDisabled"></el-input>
                 </el-form-item>
               </li>
               <li>
                 <el-form-item :label="$t('message.RedTimeLengthening')+'(s)'" prop="hdys" v-if="programItem.hdysxszt">
-                  <el-input v-model="programItem.hdys" type="number" :disabled="controlDisabled"></el-input>
+                  <el-input v-model="programItem.hdys" type="number" min="0" :disabled="controlDisabled"></el-input>
                 </el-form-item>
               </li>
               <li>
                 <el-form-item :label="$t('message.DeadZoneDuration')+'(s)'" prop="mqys" v-if="programItem.mqysxszt">
-                  <el-input v-model="programItem.mqys" type="number" :disabled="controlDisabled"></el-input>
+                  <el-input v-model="programItem.mqys" type="number" min="0" :disabled="controlDisabled"></el-input>
                 </el-form-item>
               </li>
               <li>
@@ -508,7 +508,7 @@
         <el-button @click="programDialog = false" size="mini">{{ $t('message.Cancel') }}</el-button>
       </span>
     </el-dialog>
-    <el-dialog :title="title" :visible.sync="holidayDialog" width="900px">
+    <el-dialog :title="title" :visible.sync="holidayDialog" :close-on-click-modal='false' width="900px">
       <el-form :model="holiday" :rules="holidayRules" ref="holidayForm" label-width="100px" size="mini">
         <div class="bana-information mt10 hauto">
           <div class="bana-title">{{ $t('message.BasicMessage') }}</div>
@@ -637,7 +637,7 @@
         <el-button @click="holidayDialog = false" size="mini">{{ $t('message.Cancel') }}</el-button>
       </span>
     </el-dialog>
-    <el-dialog :title="gpsTitle" v-if="gpsDialog" :visible.sync="gpsDialog" width="900px">
+    <el-dialog :title="gpsTitle" v-if="gpsDialog" :visible.sync="gpsDialog" :close-on-click-modal='false' width="900px">
       <el-form :model="gps" :rules="gpsRules" ref="gpsForm" label-width="80px" size="mini">
         <div>
           <el-form-item :label="$t('message.Controller')">
@@ -651,44 +651,44 @@
             <div class="bana-information-content">
               <ul class="gpsFormBox">
                 <li>
-                  <el-form-item label="月">
-                    <el-select v-model="gps.month1" :placeholder="$t('message.PleaseSelect')">
+                  <el-form-item label="月" prop="month1">
+                    <el-select v-model="gps.month1" :placeholder="$t('message.PleaseSelect')" :disabled="!gps.sfsyxl1 || gps.sfsyxl1 !== 1">
                       <el-option v-for="item in 12" :key="'month1-'+item" :label="item" :value="item"></el-option>
                     </el-select>
                   </el-form-item>
                 </li>
                 <li>
-                  <el-form-item label="日">
+                  <el-form-item label="日" prop="day1">
                     <el-select
                       v-if="gps.month1==1||gps.month1==3||gps.month1==5||gps.month1==7||gps.month1==8||gps.month1==10||gps.month1==12"
-                      v-model="gps.day1" :placeholder="$t('message.PleaseSelect')">
+                      v-model="gps.day1" :placeholder="$t('message.PleaseSelect')" :disabled="!gps.sfsyxl1 || gps.sfsyxl1 !== 1">
                       <el-option v-for="item in 31" :key="'day11-'+item" :label="item" :value="item"></el-option>
                     </el-select>
                     <el-select v-else-if="gps.month1==4||gps.month1==6||gps.month1==9||gps.month1==11"
-                      v-model="gps.day1" :placeholder="$t('message.PleaseSelect')">
+                      v-model="gps.day1" :placeholder="$t('message.PleaseSelect')" :disabled="!gps.sfsyxl1 || gps.sfsyxl1 !== 1">
                       <el-option v-for="item in 30" :key="'day12-'+item" :label="item" :value="item"></el-option>
                     </el-select>
-                    <el-select v-else v-model="gps.day1" :placeholder="$t('message.PleaseSelect')">
+                    <el-select v-else v-model="gps.day1" :placeholder="$t('message.PleaseSelect')" :disabled="!gps.sfsyxl1 || gps.sfsyxl1 !== 1">
                       <el-option v-for="item in 29" :key="'day13-'+item" :label="item" :value="item"></el-option>
                     </el-select>
                   </el-form-item>
                 </li>
                 <li>
-                  <el-form-item label="开始时间">
+                  <el-form-item label="开始时间" prop="startTime1">
                     <el-time-picker v-model="startTime1" :placeholder="$t('message.PleaseSelect')" format="HH:mm"
                       value-format="HH:mm">
                     </el-time-picker>
                   </el-form-item>
                 </li>
                 <li>
-                  <el-form-item label="结束时间">
+                  <el-form-item label="结束时间" prop="stopTime1">
                     <el-time-picker v-model="stopTime1" :placeholder="$t('message.PleaseSelect')" format="HH:mm"
                       value-format="HH:mm">
                     </el-time-picker>
                   </el-form-item>
                 </li>
                 <li>
-                  <el-form-item label="是否启用星历">
+                  <el-form-item label="是否启用星历" prop="sfsyxl1">
                     <el-select v-model="gps.sfsyxl1" :placeholder="$t('message.PleaseSelect')">
                       <el-option v-for="item in sfsyxlCodes" :key="'sfsyxl1-'+item.dm" :label="item.dmsm"
                         :value="item.dm">
@@ -697,7 +697,7 @@
                   </el-form-item>
                 </li>
                 <li>
-                  <el-form-item label="雾灯控制">
+                  <el-form-item label="雾灯控制" prop="wdkz1">
                     <el-select v-model="gps.wdkz1" :placeholder="$t('message.PleaseSelect')">
                       <el-option v-for="item in wdkzCodes" :key="'wdkz1-'+item.dm" :label="item.dmsm" :value="item.dm">
                       </el-option>
@@ -705,12 +705,12 @@
                   </el-form-item>
                 </li>
                 <li>
-                  <el-form-item label="雾灯亮度">
-                    <el-input v-model="gps.wdld1"></el-input>
+                  <el-form-item label="雾灯亮度" prop="wdld1">
+                    <el-input v-model="gps.wdld1" type="number" min="0"></el-input>
                   </el-form-item>
                 </li>
                 <li>
-                  <el-form-item label="占空比">
+                  <el-form-item label="占空比" prop="zkb1">
                     <!-- <el-input v-model="gps.zkb1"></el-input> -->
                     <el-select v-model="gps.zkb1" :placeholder="$t('message.PleaseSelect')">
                       <el-option v-for="item in zkbCodes" :key="item.dm" :label="item.dmsm" :value="item.dm">
@@ -719,18 +719,18 @@
                   </el-form-item>
                 </li>
                 <li>
-                  <el-form-item label="红灯延时">
-                    <el-input v-model="gps.hdys1"></el-input>
+                  <el-form-item label="红灯延时" prop="hdys1">
+                    <el-input v-model="gps.hdys1" type="number" min="0"></el-input>
                   </el-form-item>
                 </li>
                 <li>
-                  <el-form-item label="盲区延时">
-                    <el-input v-model="gps.mqys1"></el-input>
+                  <el-form-item label="盲区延时" prop="mqys1">
+                    <el-input v-model="gps.mqys1" type="number" min="0"></el-input>
                   </el-form-item>
                 </li>
                 <li>
-                  <el-form-item label="警示灯组数">
-                    <el-input v-model="gps.hsjsdzsl1"></el-input>
+                  <el-form-item label="警示灯组数" prop="hsjsdzsl1">
+                    <el-input v-model="gps.hsjsdzsl1" type="number" min="0"></el-input>
                   </el-form-item>
                 </li>
               </ul>
@@ -741,44 +741,44 @@
             <div class="bana-information-content">
               <ul class="gpsFormBox">
                 <li>
-                  <el-form-item label="月">
-                    <el-select v-model="gps.month2" :placeholder="$t('message.PleaseSelect')">
+                  <el-form-item label="月" prop="month2">
+                    <el-select v-model="gps.month2" :placeholder="$t('message.PleaseSelect')" :disabled="!gps.sfsyxl2 || gps.sfsyxl2 !== 1">
                       <el-option v-for="item in 12" :key="'month2-'+item" :label="item" :value="item"></el-option>
                     </el-select>
                   </el-form-item>
                 </li>
                 <li>
-                  <el-form-item label="日">
+                  <el-form-item label="日" prop="day2">
                     <el-select
                       v-if="gps.month2==1||gps.month2==3||gps.month2==5||gps.month2==7||gps.month2==8||gps.month2==10||gps.month2==12"
-                      v-model="gps.day2" :placeholder="$t('message.PleaseSelect')">
+                      v-model="gps.day2" :placeholder="$t('message.PleaseSelect')" :disabled="!gps.sfsyxl2 || gps.sfsyxl2 !== 1">
                       <el-option v-for="item in 31" :key="'day21-'+item" :label="item" :value="item"></el-option>
                     </el-select>
                     <el-select v-else-if="gps.month2==4||gps.month2==6||gps.month2==9||gps.month2==11"
-                      v-model="gps.day2" :placeholder="$t('message.PleaseSelect')">
+                      v-model="gps.day2" :placeholder="$t('message.PleaseSelect')" :disabled="!gps.sfsyxl2 || gps.sfsyxl2 !== 1">
                       <el-option v-for="item in 30" :key="'day22-'+item" :label="item" :value="item"></el-option>
                     </el-select>
-                    <el-select v-else v-model="gps.day2" :placeholder="$t('message.PleaseSelect')">
+                    <el-select v-else v-model="gps.day2" :placeholder="$t('message.PleaseSelect')" :disabled="!gps.sfsyxl2 || gps.sfsyxl2 !== 1">
                       <el-option v-for="item in 29" :key="'day22-'+item" :label="item" :value="item"></el-option>
                     </el-select>
                   </el-form-item>
                 </li>
                 <li>
-                  <el-form-item label="开始时间">
+                  <el-form-item label="开始时间" prop="startTime2">
                     <el-time-picker v-model="startTime2" :placeholder="$t('message.PleaseSelect')" format="HH:mm"
                       value-format="HH:mm">
                     </el-time-picker>
                   </el-form-item>
                 </li>
                 <li>
-                  <el-form-item label="结束时间">
+                  <el-form-item label="结束时间" prop="stopTime2">
                     <el-time-picker v-model="stopTime2" :placeholder="$t('message.PleaseSelect')" format="HH:mm"
                       value-format="HH:mm">
                     </el-time-picker>
                   </el-form-item>
                 </li>
                 <li>
-                  <el-form-item label="是否启用星历">
+                  <el-form-item label="是否启用星历" prop="sfsyxl2">
                     <el-select v-model="gps.sfsyxl2" :placeholder="$t('message.PleaseSelect')">
                       <el-option v-for="item in sfsyxlCodes" :key="'sfsyxl2-'+item.dm" :label="item.dmsm"
                         :value="item.dm">
@@ -787,7 +787,7 @@
                   </el-form-item>
                 </li>
                 <li>
-                  <el-form-item label="雾灯控制">
+                  <el-form-item label="雾灯控制" prop="wdkz2">
                     <el-select v-model="gps.wdkz2" :placeholder="$t('message.PleaseSelect')">
                       <el-option v-for="item in wdkzCodes" :key="'wdkz2-'+item.dm" :label="item.dmsm" :value="item.dm">
                       </el-option>
@@ -795,12 +795,12 @@
                   </el-form-item>
                 </li>
                 <li>
-                  <el-form-item label="雾灯亮度">
-                    <el-input v-model="gps.wdld2"></el-input>
+                  <el-form-item label="雾灯亮度" prop="wdld2">
+                    <el-input v-model="gps.wdld2" type="number" min="0"></el-input>
                   </el-form-item>
                 </li>
                 <li>
-                  <el-form-item label="占空比">
+                  <el-form-item label="占空比" prop="zkb2">
                     <!-- <el-input v-model="gps.zkb2"></el-input> -->
                     <el-select v-model="gps.zkb2" :placeholder="$t('message.PleaseSelect')">
                       <el-option v-for="item in zkbCodes" :key="item.dm" :label="item.dmsm" :value="item.dm">
@@ -809,18 +809,18 @@
                   </el-form-item>
                 </li>
                 <li>
-                  <el-form-item label="红灯延时">
-                    <el-input v-model="gps.hdys2"></el-input>
+                  <el-form-item label="红灯延时" prop="hdys2">
+                    <el-input v-model="gps.hdys2" type="number" min="0"></el-input>
                   </el-form-item>
                 </li>
                 <li>
-                  <el-form-item label="盲区延时">
-                    <el-input v-model="gps.mqys2"></el-input>
+                  <el-form-item label="盲区延时" prop="mqys2">
+                    <el-input v-model="gps.mqys2" type="number" min="0"></el-input>
                   </el-form-item>
                 </li>
                 <li>
-                  <el-form-item label="警示灯组数">
-                    <el-input v-model="gps.hsjsdzsl2"></el-input>
+                  <el-form-item label="警示灯组数" prop="hsjsdzsl2">
+                    <el-input v-model="gps.hsjsdzsl2" type="number" min="0"></el-input>
                   </el-form-item>
                 </li>
               </ul>
@@ -831,44 +831,44 @@
             <div class="bana-information-content">
               <ul class="gpsFormBox">
                 <li>
-                  <el-form-item label="月">
-                    <el-select v-model="gps.month3" :placeholder="$t('message.PleaseSelect')">
+                  <el-form-item label="月" prop="month3">
+                    <el-select v-model="gps.month3" :placeholder="$t('message.PleaseSelect')" :disabled="!gps.sfsyxl3 || gps.sfsyxl3 !== 1">
                       <el-option v-for="item in 12" :key="'month3-'+item" :label="item" :value="item"></el-option>
                     </el-select>
                   </el-form-item>
                 </li>
                 <li>
-                  <el-form-item label="日">
+                  <el-form-item label="日" prop="day3">
                     <el-select
                       v-if="gps.month3==1||gps.month3==3||gps.month3==5||gps.month3==7||gps.month3==8||gps.month3==10||gps.month3==12"
-                      v-model="gps.day3" :placeholder="$t('message.PleaseSelect')">
+                      v-model="gps.day3" :placeholder="$t('message.PleaseSelect')" :disabled="!gps.sfsyxl3 || gps.sfsyxl3 !== 1">
                       <el-option v-for="item in 31" :key="'day31-'+item" :label="item" :value="item"></el-option>
                     </el-select>
                     <el-select v-else-if="gps.month3==4||gps.month3==6||gps.month3==9||gps.month3==11"
-                      v-model="gps.day3" :placeholder="$t('message.PleaseSelect')">
+                      v-model="gps.day3" :placeholder="$t('message.PleaseSelect')" :disabled="!gps.sfsyxl3 || gps.sfsyxl3 !== 1">
                       <el-option v-for="item in 30" :key="'day32-'+item" :label="item" :value="item"></el-option>
                     </el-select>
-                    <el-select v-else v-model="gps.day3" :placeholder="$t('message.PleaseSelect')">
+                    <el-select v-else v-model="gps.day3" :placeholder="$t('message.PleaseSelect')" :disabled="!gps.sfsyxl3 || gps.sfsyxl3 !== 1">
                       <el-option v-for="item in 29" :key="'day33-'+item" :label="item" :value="item"></el-option>
                     </el-select>
                   </el-form-item>
                 </li>
                 <li>
-                  <el-form-item label="开始时间">
+                  <el-form-item label="开始时间" prop="startTime3">
                     <el-time-picker v-model="startTime3" :placeholder="$t('message.PleaseSelect')" format="HH:mm"
                       value-format="HH:mm">
                     </el-time-picker>
                   </el-form-item>
                 </li>
                 <li>
-                  <el-form-item label="结束时间">
+                  <el-form-item label="结束时间" prop="stopTime3">
                     <el-time-picker v-model="stopTime3" :placeholder="$t('message.PleaseSelect')" format="HH:mm"
                       value-format="HH:mm">
                     </el-time-picker>
                   </el-form-item>
                 </li>
                 <li>
-                  <el-form-item label="是否启用星历">
+                  <el-form-item label="是否启用星历" prop="sfsyxl3">
                     <el-select v-model="gps.sfsyxl3" :placeholder="$t('message.PleaseSelect')">
                       <el-option v-for="item in sfsyxlCodes" :key="'sfsyxl3-'+item.dm" :label="item.dmsm"
                         :value="item.dm">
@@ -877,7 +877,7 @@
                   </el-form-item>
                 </li>
                 <li>
-                  <el-form-item label="雾灯控制">
+                  <el-form-item label="雾灯控制" prop="wdkz3">
                     <el-select v-model="gps.wdkz3" :placeholder="$t('message.PleaseSelect')">
                       <el-option v-for="item in wdkzCodes" :key="'wdkz3-'+item.dm" :label="item.dmsm" :value="item.dm">
                       </el-option>
@@ -885,12 +885,12 @@
                   </el-form-item>
                 </li>
                 <li>
-                  <el-form-item label="雾灯亮度">
-                    <el-input v-model="gps.wdld3"></el-input>
+                  <el-form-item label="雾灯亮度" prop="wdld3">
+                    <el-input v-model="gps.wdld3" type="number" min="0"></el-input>
                   </el-form-item>
                 </li>
                 <li>
-                  <el-form-item label="占空比">
+                  <el-form-item label="占空比" prop="zkb3">
                     <!-- <el-input v-model="gps.zkb3"></el-input> -->
                     <el-select v-model="gps.zkb3" :placeholder="$t('message.PleaseSelect')">
                       <el-option v-for="item in zkbCodes" :key="item.dm" :label="item.dmsm" :value="item.dm">
@@ -899,18 +899,18 @@
                   </el-form-item>
                 </li>
                 <li>
-                  <el-form-item label="红灯延时">
-                    <el-input v-model="gps.hdys3"></el-input>
+                  <el-form-item label="红灯延时" prop="hdys3">
+                    <el-input v-model="gps.hdys3" type="number" min="0"></el-input>
                   </el-form-item>
                 </li>
                 <li>
-                  <el-form-item label="盲区延时">
-                    <el-input v-model="gps.mqys3"></el-input>
+                  <el-form-item label="盲区延时" prop="mqys3">
+                    <el-input v-model="gps.mqys3" type="number" min="0"></el-input>
                   </el-form-item>
                 </li>
                 <li>
-                  <el-form-item label="警示灯组数">
-                    <el-input v-model="gps.hsjsdzsl3"></el-input>
+                  <el-form-item label="警示灯组数" prop="hsjsdzsl3">
+                    <el-input v-model="gps.hsjsdzsl3" type="number" min="0"></el-input>
                   </el-form-item>
                 </li>
               </ul>
@@ -923,7 +923,7 @@
         <el-button @click="gpsDialog = false" size="mini">{{ $t('message.Cancel') }}</el-button>
       </span>
     </el-dialog>
-    <el-dialog :title="gpsTableTitle" :visible.sync="gpsTableDialog" width="900px">
+    <el-dialog :title="gpsTableTitle" :visible.sync="gpsTableDialog" :close-on-click-modal='false' width="900px">
       <div class="gridBox">
         <el-table :data="gpsTableData">
           <el-table-column align="center" prop="name" label="控制器名称">
@@ -951,7 +951,37 @@
   import Code from "./js/Code.js";
   export default {
     data() {
-
+      //   var checkStartTime1 = (rule, value, callback) => {
+      //       console.log(value)
+      //     if (!value) {
+      //       return callback(new Error('请选择开始时间'));
+      //     }
+      //   }
+      //   var checkStartTime2 = (rule, value, callback) => {
+      //     if (!value) {
+      //       return callback(new Error('请选择开始时间'));
+      //     }
+      //   }
+      //   var checkStartTime3 = (rule, value, callback) => {
+      //     if (!value) {
+      //       return callback(new Error('请选择开始时间'));
+      //     }
+      //   }
+      //   var checkStopTime1 = (rule, value, callback) => {
+      //     if (!value) {
+      //       return callback(new Error('请选择结束时间'));
+      //     }
+      //   }
+      //   var checkStopTime2 = (rule, value, callback) => {
+      //     if (!value) {
+      //       return callback(new Error('请选择结束时间'));
+      //     }
+      //   }
+      //   var checkStopTime3 = (rule, value, callback) => {
+      //     if (!value) {
+      //       return callback(new Error('请选择结束时间'));
+      //     }
+      //   }
       var checkProgramCxsj = (rule, value, callback) => {
         let SolutionConfigTimes = "";
         let kssjTimes = "";
@@ -972,6 +1002,12 @@
         }, 0);
       };
       return {
+        disMonth1: false,
+        disMonth2: false,
+        disMonth3: false,
+        disDay1: false,
+        disDay2: false,
+        disDay3: false,
         controllers: [], //可选控制器集合
         gps: {},
         queryControllersTimerConfigData: [], //GPS定时器列表数据
@@ -1090,7 +1126,60 @@
           mqys: this.filterRules('盲区延时', true, null, null, 'time'),
           hsjsdzsl: this.filterRules('红色警示灯数量', true, null, null, 'alarm'),
         },
-        gpsRules: {},
+        gpsRules: {
+          month1: this.filterRules('月', false),
+          day1: this.filterRules('日', false),
+          //   startTime1: [{
+          //     validator: checkStartTime1,
+          //     trigger: 'blur'
+          //   }],
+          //   stopTime1: [{
+          //     validator: checkStopTime1,
+          //     trigger: 'blur'
+          //   }],
+          sfsyxl1: this.filterRules('是否使用星历', false),
+          zkb1: this.filterRules('占空比', false),
+          wdkz1: this.filterRules('控制模式', false),
+          wdld1: this.filterRules('雾灯亮度', true, null, null, 'wdld'),
+          hdys1: this.filterRules('红灯延时', true, null, null, 'time'),
+          mqys1: this.filterRules('盲区延时', true, null, null, 'time'),
+          hsjsdzsl1: this.filterRules('红色警示灯数量', true, null, null, 'alarm'),
+          month2: this.filterRules('月', false),
+          day2: this.filterRules('日', false),
+          //   startTime2: [{
+          //     validator: checkStartTime2,
+          //     trigger: 'blur'
+          //   }],
+          //   stopTime2: [{
+          //     validator: checkStopTime2,
+          //     trigger: 'blur'
+          //   }],
+          sfsyxl2: this.filterRules('是否使用星历', false),
+          zkb2: this.filterRules('占空比', false),
+          wdkz2: this.filterRules('控制模式', false),
+          wdld2: this.filterRules('雾灯亮度', true, null, null, 'wdld'),
+          hdys2: this.filterRules('红灯延时', true, null, null, 'time'),
+          mqys2: this.filterRules('盲区延时', true, null, null, 'time'),
+          hsjsdzsl2: this.filterRules('红色警示灯数量', true, null, null, 'alarm'),
+          month3: this.filterRules('月', false),
+          day3: this.filterRules('日', false),
+          //   startTime3: [{
+          //     validator: checkStartTime3,
+          //     trigger: 'blur'
+          //   }],
+          //   stopTime3: [{
+          //     validator: checkStopTime3,
+          //     trigger: 'blur'
+          //   }],
+          sfsyxl3: this.filterRules('是否使用星历', false),
+          zkb3: this.filterRules('占空比', false),
+          wdkz3: this.filterRules('控制模式', false),
+          wdld3: this.filterRules('雾灯亮度', true, null, null, 'wdld'),
+          hdys3: this.filterRules('红灯延时', true, null, null, 'time'),
+          mqys3: this.filterRules('盲区延时', true, null, null, 'time'),
+          hsjsdzsl3: this.filterRules('红色警示灯数量', true, null, null, 'alarm'),
+        },
+        gpsForm: {},
         //假日
         //新增，修改表单
         holiday: {},
@@ -1130,7 +1219,12 @@
     methods: {
       //改变GPS弹窗里的控制器选择
       changeController(val) {
+        // console.log(val)
+        if (this.$refs['gpsForm'] != undefined) {
+          this.$refs['gpsForm'].resetFields();
+        }
         this.gps = this.queryControllersTimerConfigData[val - 1]
+        this.gps.kzqbm = val
         this.intGps(this.gps)
       },
       deleteZero(str) {
@@ -1141,47 +1235,86 @@
       },
       //设置定时参数
       setControllersTimerConfig() {
-        let data = JSON.parse(JSON.stringify(this.gps))
-        data.sfsyxl1 = data.sfsyxl1 === 1
-        data.sfsyxl2 = data.sfsyxl2 === 1
-        data.sfsyxl3 = data.sfsyxl3 === 1
-        data.wqbm = this.wqbm
-        data.startHour1 = this.deleteZero(this.startTime1.split(':')[0])
-        data.startHour2 = this.deleteZero(this.startTime2.split(':')[0])
-        data.startHour3 = this.deleteZero(this.startTime3.split(':')[0])
-        data.stopHour1 = this.deleteZero(this.stopTime1.split(':')[0])
-        data.stopHour2 = this.deleteZero(this.stopTime2.split(':')[0])
-        data.stopHour3 = this.deleteZero(this.stopTime3.split(':')[0])
-        data.startMinute1 = this.deleteZero(this.startTime1.split(':')[1])
-        data.startMinute2 = this.deleteZero(this.startTime2.split(':')[1])
-        data.startMinute3 = this.deleteZero(this.startTime3.split(':')[1])
-        data.stopMinute1 = this.deleteZero(this.stopTime1.split(':')[1])
-        data.stopMinute2 = this.deleteZero(this.stopTime2.split(':')[1])
-        data.stopMinute3 = this.deleteZero(this.stopTime3.split(':')[1])
+        this.$refs['gpsForm'].validate((valid) => {
+          if (!this.startTime1) {
+            this.$alert("时段1开始时间不能为空", '提示', {
+              confirmButtonText: '确定',
+            });
+            return
+          }
+          if (!this.startTime2) {
+            this.$alert("时段2开始时间不能为空", '提示', {
+              confirmButtonText: '确定',
+            });
+            return
+          }
+          if (!this.startTime3) {
+            this.$alert("时段3开始时间不能为空", '提示', {
+              confirmButtonText: '确定',
+            });
+            return
+          }
+          if (!this.stopTime1) {
+            this.$alert("时段1结束时间不能为空", '提示', {
+              confirmButtonText: '确定',
+            });
+            return
+          }
+          if (!this.stopTime2) {
+            this.$alert("时段2结束时间不能为空", '提示', {
+              confirmButtonText: '确定',
+            });
+            return
+          }
+          if (!this.stopTime3) {
+            this.$alert("时段3结束时间不能为空", '提示', {
+              confirmButtonText: '确定',
+            });
+            return
+          }
+          if (valid) {
+            let data = JSON.parse(JSON.stringify(this.gps))
+            data.sfsyxl1 = data.sfsyxl1 === 1
+            data.sfsyxl2 = data.sfsyxl2 === 1
+            data.sfsyxl3 = data.sfsyxl3 === 1
+            data.wqbm = this.wqbm
+            data.startHour1 = this.deleteZero(this.startTime1.split(':')[0])
+            data.startHour2 = this.deleteZero(this.startTime2.split(':')[0])
+            data.startHour3 = this.deleteZero(this.startTime3.split(':')[0])
+            data.stopHour1 = this.deleteZero(this.stopTime1.split(':')[0])
+            data.stopHour2 = this.deleteZero(this.stopTime2.split(':')[0])
+            data.stopHour3 = this.deleteZero(this.stopTime3.split(':')[0])
+            data.startMinute1 = this.deleteZero(this.startTime1.split(':')[1])
+            data.startMinute2 = this.deleteZero(this.startTime2.split(':')[1])
+            data.startMinute3 = this.deleteZero(this.startTime3.split(':')[1])
+            data.stopMinute1 = this.deleteZero(this.stopTime1.split(':')[1])
+            data.stopMinute2 = this.deleteZero(this.stopTime2.split(':')[1])
+            data.stopMinute3 = this.deleteZero(this.stopTime3.split(':')[1])
+            // console.log(data)
+            // return
+            FogArea.setControllersTimerConfig(data).then(value => {
+              //   console.log(value)
+              this.gpsDialog = false
+              this.gpsTableDialog = true
+              this.gpsTableTitle = "设置定时参数结果"
+              this.gpsTableData = value
 
-        // console.log(data)
-        FogArea.setControllersTimerConfig(data).then(value => {
-          //   console.log(value)
-          this.gpsDialog = false
-          this.gpsTableDialog = true
-          this.gpsTableTitle = "设置定时参数结果"
-          this.gpsTableData = value
-
+            })
+          }
         })
+
       },
       closeGpsTableDialog() {
         this.gpsTableDialog = false
         this.getQueryControllersTimerConfig()
-        // console.log(this.gps)
-        // this.intGps(this.gps)
       },
       //雾区查询定时参数
       getQueryControllersTimerConfig() {
-        //   console.log(this.wqbm)
         if (!this.wqbm) {
           this.$alert("请选择雾区", '提示', {
             confirmButtonText: '确定',
           });
+          return
         }
         FogArea.queryControllersTimerConfig({
           wqbm: this.wqbm
@@ -1206,36 +1339,78 @@
       },
       intGps(gpsData) {
         let gpsDatas = JSON.parse(JSON.stringify(gpsData))
-        gpsData.sfsyxl1 = gpsData.sfsyxl1 ? 1 : 0
-        gpsData.sfsyxl2 = gpsData.sfsyxl2 ? 1 : 0
-        gpsData.sfsyxl3 = gpsData.sfsyxl3 ? 1 : 0
-        gpsData.zkb1 = gpsData.zkb1 === 0 ? 1 : gpsDatas.zkb1
-        gpsData.zkb2 = gpsData.zkb2 === 0 ? 1 : gpsDatas.zkb2
-        gpsData.zkb3 = gpsData.zkb3 === 0 ? 1 : gpsDatas.zkb3
-        gpsData.kzqbm = gpsData.kzqbm == 0 ? 1 : gpsDatas.kzqbm
-        this.startTime1 = gpsData.startHour1 === -1 ? "01:00" : gpsDatas.startHour1 + ":" +
-          gpsDatas.startMinute1
-        this.startTime2 = gpsData.startHour2 === -1 ? "01:00" : gpsDatas.startHour2 + ":" +
-          gpsDatas.startMinute2
-        this.startTime3 = gpsData.startHour3 === -1 ? "01:00" : gpsDatas.startHour3 + ":" +
-          gpsDatas.startMinute3
-        this.stopTime1 = gpsData.startHour1 === -1 ? "01:00" : gpsDatas.stopHour1 + ":" +
-          gpsDatas.stopMinute1
-        this.stopTime2 = gpsData.startHour2 === -1 ? "01:00" : gpsDatas.stopHour2 + ":" +
-          gpsDatas.stopMinute2
-        this.stopTime3 = gpsData.startHour3 === -1 ? "01:00" : gpsDatas.stopHour3 + ":" +
-          gpsDatas.stopMinute3
-        gpsData.month1 = gpsData.month1 === 0 ? 1 : gpsDatas.month1
-        gpsData.day1 = gpsData.day1 === 0 ? 1 : gpsDatas.day1
-        gpsData.wdkz1 = gpsData.wdkz1 === 0 ? 1 : gpsDatas.wdkz1
-        gpsData.month2 = gpsData.month2 === 0 ? 1 : gpsDatas.month2
-        gpsData.day2 = gpsData.day2 === 0 ? 1 : gpsDatas.day2
-        gpsData.wdkz2 = gpsData.wdkz2 === 0 ? 1 : gpsDatas.wdkz2
-        gpsData.month3 = gpsData.month3 === 0 ? 1 : gpsDatas.month3
-        gpsData.day3 = gpsData.day3 === 0 ? 1 : gpsDatas.day3
-        gpsData.wdkz3 = gpsData.wdkz3 === 0 ? 1 : gpsDatas.wdkz3
-        gpsData.controller = this.queryControllersTimerConfigData.length > 0 ? this.queryControllersTimerConfigData[0]
-          .kzqbm : null
+        // gpsData.kzqbm = gpsData.kzqbm == 0 ? 1 : gpsDatas.kzqbm
+        if (gpsDatas.readSuccess1) {
+          gpsData.sfsyxl1 = gpsData.sfsyxl1 ? 1 : 0
+          gpsData.zkb1 = gpsData.zkb1 === 0 ? 1 : gpsDatas.zkb1
+          this.startTime1 = gpsData.startHour1 === -1 ? "01:00" : gpsDatas.startHour1 + ":" +
+            gpsDatas.startMinute1
+          this.stopTime1 = gpsData.startHour1 === -1 ? "01:00" : gpsDatas.stopHour1 + ":" +
+            gpsDatas.stopMinute1
+          gpsData.month1 = gpsData.month1 === 0 ? 1 : gpsDatas.month1
+          gpsData.day1 = gpsData.day1 === 0 ? 1 : gpsDatas.day1
+          gpsData.wdkz1 = gpsData.wdkz1 === 0 ? 1 : gpsDatas.wdkz1
+        } else {
+          gpsData.sfsyxl1 = ""
+          gpsData.zkb1 = ""
+          this.startTime1 = ""
+          this.stopTime1 = ""
+          gpsData.month1 = ""
+          gpsData.day1 = ""
+          gpsData.wdkz1 = ""
+          gpsData.wdld1 = ""
+          gpsData.hdys1 = ""
+          gpsData.mqys1 = ""
+          gpsData.hsjsdzsl1 = ""
+        }
+        if (gpsDatas.readSuccess2) {
+
+          gpsData.sfsyxl2 = gpsData.sfsyxl2 ? 1 : 0
+          gpsData.zkb2 = gpsData.zkb2 === 0 ? 1 : gpsDatas.zkb2
+          this.startTime2 = gpsData.startHour2 === -1 ? "01:00" : gpsDatas.startHour2 + ":" +
+            gpsDatas.startMinute2
+          this.stopTime2 = gpsData.startHour2 === -1 ? "01:00" : gpsDatas.stopHour2 + ":" +
+            gpsDatas.stopMinute2
+          gpsData.month2 = gpsData.month2 === 0 ? 1 : gpsDatas.month2
+          gpsData.day2 = gpsData.day2 === 0 ? 1 : gpsDatas.day2
+          gpsData.wdkz2 = gpsData.wdkz2 === 0 ? 1 : gpsDatas.wdkz2
+        } else {
+          gpsData.sfsyxl2 = ""
+          gpsData.zkb2 = ""
+          this.startTime2 = ""
+          this.stopTime2 = ""
+          gpsData.month2 = ""
+          gpsData.day2 = ""
+          gpsData.wdkz2 = ""
+          gpsData.wdld2 = ""
+          gpsData.hdys2 = ""
+          gpsData.mqys2 = ""
+          gpsData.hsjsdzsl2 = ""
+        }
+        if (gpsDatas.readSuccess3) {
+          gpsData.sfsyxl3 = gpsData.sfsyxl3 ? 1 : 0
+          gpsData.zkb3 = gpsData.zkb3 === 0 ? 1 : gpsDatas.zkb3
+          this.startTime3 = gpsData.startHour3 === -1 ? "01:00" : gpsDatas.startHour3 + ":" +
+            gpsDatas.startMinute3
+          this.stopTime3 = gpsData.startHour3 === -1 ? "01:00" : gpsDatas.stopHour3 + ":" +
+            gpsDatas.stopMinute3
+          gpsData.month3 = gpsData.month3 === 0 ? 1 : gpsDatas.month3
+          gpsData.day3 = gpsData.day3 === 0 ? 1 : gpsDatas.day3
+          gpsData.wdkz3 = gpsData.wdkz3 === 0 ? 1 : gpsDatas.wdkz3
+        } else {
+          gpsData.sfsyxl3 = ""
+          gpsData.zkb3 = ""
+          this.startTime3 = ""
+          this.stopTime3 = ""
+          gpsData.month3 = ""
+          gpsData.day3 = ""
+          gpsData.wdkz3 = ""
+          gpsData.wdld3 = ""
+          gpsData.hdys3 = ""
+          gpsData.mqys3 = ""
+          gpsData.hsjsdzsl3 = ""
+        }
+
       },
       //设置定时参数（打开弹窗）
       openGpsDialog() {
@@ -1247,6 +1422,7 @@
         }
         // console.log(this.gps)
         this.intGps(this.gps)
+        this.gps.kzqbm = this.controllers[0].kzqbm
         this.gpsDialog = true
         this.gpsTitle = '控制器定时设置'
       },
@@ -1669,6 +1845,8 @@
         }
 
         Promise.all([validate]).then(() => {
+          // console.log(valid)
+          // return
           if (this.isUpdating) {
             Program.updateProgram(data).then(value => {
               if (value.czjg == Dictionary.DatabaseResult.Success) {

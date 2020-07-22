@@ -76,7 +76,7 @@
       </div>
     </div>
     <!-- 新增弹窗 -->
-    <el-dialog :title="dialogTitle" :visible.sync="dialogVisible" width="44%">
+    <el-dialog :title="dialogTitle" :visible.sync="dialogVisible" :close-on-click-modal='false' width="44%">
       <el-form :inline="true" :model="department" :rules="departmentRules" ref="departmentForm" label-width="80px" label-position="right" size="mini">
         <el-row>
           <el-col :span="12">

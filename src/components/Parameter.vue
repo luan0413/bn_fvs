@@ -28,7 +28,7 @@
         </el-pagination>
       </div>
       </section>
-      <el-dialog :title="$t('message.Update')" :visible.sync="updataParameter" width="300px">
+      <el-dialog :title="$t('message.Update')" :visible.sync="updataParameter" :close-on-click-modal='false' width="300px">
         <span>
           <el-form :model="updateForm" :rules="updaterules" ref="updateForms" label-width="60px" size="mini">
             <el-form-item :label="$t('message.ParameterName')" prop="csbm">

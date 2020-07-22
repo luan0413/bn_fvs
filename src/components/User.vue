@@ -60,7 +60,7 @@
       </div>
     </section>
     <!--新增用户弹窗-->
-    <el-dialog :title="$t('message.Insert')" :visible.sync="newUserDialog" width="300px">
+    <el-dialog :title="$t('message.Insert')" :visible.sync="newUserDialog" :close-on-click-modal='false' width="300px">
       <span>
         <el-form :model="newUser" :rules="userRules" ref="newUserForm" label-width="60px" size="mini">
           <el-form-item :label="$t('message.UserName')" prop="yhmc">
@@ -97,7 +97,7 @@
       </span>
     </el-dialog>
     <!--修改用户弹窗-->
-    <el-dialog :title="$t('message.Update')" :visible.sync="updateUserDialog" width="300px">
+    <el-dialog :title="$t('message.Update')" :visible.sync="updateUserDialog" :close-on-click-modal='false' width="300px">
       <span>
         <el-form :model="editUser" :rules="userRules" ref="updateUserForm" label-width="60px" size="mini">
           <el-form-item :label="$t('message.UserName')" prop="yhmc">
@@ -131,7 +131,7 @@
       </span>
     </el-dialog>
     <!--修改密码弹窗-->
-    <el-dialog :title="$t('message.UpdatePassword')" :visible.sync="updateUserPassword" width="300px">
+    <el-dialog :title="$t('message.UpdatePassword')" :visible.sync="updateUserPassword" :close-on-click-modal='false' width="300px">
       <span>
         <el-form :model="editUser" :rules="userRules" ref="userPasswordForm" label-width="60px" size="mini">
           <el-form-item :label="$t('message.Password')" prop="dlmm">

@@ -115,20 +115,20 @@
             <el-form :model="lightConfig" :rules="lightConfigRules" ref="lightConfigForm" label-width="150px"
               size="mini">
               <div class="light_top_box">
-                <el-form-item label="访问周期(分钟)">
-                  <el-input v-model="lightConfig.fwzq" :placeholder="$t('message.PleaseInput')" type="number">
+                <el-form-item label="访问周期(分钟)" prop="fwzq">
+                  <el-input v-model="lightConfig.fwzq" :placeholder="$t('message.PleaseInput')" type="number" min="0">
                   </el-input>
                 </el-form-item>
-                <el-form-item label="确认次数)">
-                  <el-input v-model="lightConfig.qrcs" :placeholder="$t('message.PleaseInput')" type="number">
+                <el-form-item label="确认次数" prop="qrcs">
+                  <el-input v-model="lightConfig.qrcs" :placeholder="$t('message.PleaseInput')" type="number" min="0">
                   </el-input>
                 </el-form-item>
-                <el-form-item label="开灯阈值">
-                  <el-input v-model="lightConfig.kdfz" :placeholder="$t('message.PleaseInput')" type="number">
+                <el-form-item label="开灯阈值" prop="kdfz">
+                  <el-input v-model="lightConfig.kdfz" :placeholder="$t('message.PleaseInput')" type="number" min="0">
                   </el-input>
                 </el-form-item>
-                <el-form-item label="关灯阈值">
-                  <el-input v-model="lightConfig.gdfz" :placeholder="$t('message.PleaseInput')" type="number">
+                <el-form-item label="关灯阈值" prop="gdfz">
+                  <el-input v-model="lightConfig.gdfz" :placeholder="$t('message.PleaseInput')" type="number" min="0">
                   </el-input>
                 </el-form-item>
                 <el-form-item label="检查控制器">
@@ -142,8 +142,6 @@
               <div class="light_bottom_box">
                 <div class="light_bottom_box_title">开灯控制</div>
                 <div class="light_bottom_box_content">
-                  <!-- <el-form :model="kd_controller" :rules="visibilityRules" ref="visibilityForm" label-width="150px"
-                    size="mini"> -->
                   <div class="bana-informations mt20 hauto">
                     <div class="bana-title">控制策略</div>
                     <div class="bana-information-content">
@@ -206,25 +204,28 @@
                         <li>
                           <el-form-item :label="$t('message.LightsONDuration')+'(ms)'" prop="kd_ldsc"
                             v-if="kd_controller.ldscxszt">
-                            <el-input v-model="lightConfig.kd_ldsc" type="number"></el-input>
+                            <el-input v-model="lightConfig.kd_ldsc" type="number" min="0"></el-input>
                           </el-form-item>
                         </li>
                         <li>
                           <el-form-item :label="$t('message.LightsOFFDuration')+'(ms)'" prop="kd_mdsc"
                             v-if="kd_controller.mdscxszt">
-                            <el-input v-model="lightConfig.kd_mdsc" type="number" auto-complete="off"></el-input>
+                            <el-input v-model="lightConfig.kd_mdsc" type="number" auto-complete="off" min="0">
+                            </el-input>
                           </el-form-item>
                         </li>
                         <li>
                           <el-form-item :label="$t('message.RedTimeLengthening')+'(s)'" prop="kd_hdys"
                             v-if="kd_controller.hdysxszt">
-                            <el-input v-model="lightConfig.kd_hdys" type="number" auto-complete="off"></el-input>
+                            <el-input v-model="lightConfig.kd_hdys" type="number" auto-complete="off" min="0">
+                            </el-input>
                           </el-form-item>
                         </li>
                         <li>
                           <el-form-item :label="$t('message.DeadZoneDuration')+'(s)'" prop="kd_mqys"
                             v-if="kd_controller.mqysxszt">
-                            <el-input v-model="lightConfig.kd_mqys" type="number" auto-complete="off"></el-input>
+                            <el-input v-model="lightConfig.kd_mqys" type="number" auto-complete="off" min="0">
+                            </el-input>
                           </el-form-item>
                         </li>
                         <li>
@@ -238,7 +239,6 @@
                       </ul>
                     </div>
                   </div>
-                  <!-- </el-form> -->
                 </div>
               </div>
             </el-form>
@@ -251,7 +251,8 @@
       </el-tabs>
     </section>
     <!-- 控制器详情弹出框 -->
-    <el-dialog :title="$t('message.ControllerDetails')" :visible.sync="controllerVisible" width="70%">
+    <el-dialog :title="$t('message.ControllerDetails')" :close-on-click-modal='false' :visible.sync="controllerVisible"
+      width="70%">
       <div class="wdCons">
         <div class="bana-informations">
           <div class="bana-titles">{{ $t('message.ControllerInf') }}</div>
@@ -355,6 +356,7 @@
         </div>
       </div>
       <div slot="footer" class="dialog-footer">
+        <span style="margin-left: 120px;float: left;color: red;">数据库对比说明：控制器数据 一 数据库数据</span>
         <el-checkbox v-model="comparison" class="mr20">{{ $t('message.DataComparison') }}</el-checkbox>
         <el-button @click="syncVisibility" type="primary" size="mini">{{ $t('message.IssueDeviceParameter') }}
         </el-button>
@@ -362,11 +364,11 @@
       </div>
     </el-dialog>
     <!--下发控制显示界面  -->
-    <el-dialog title="下发控制" :visible.sync="controllDialog" width="800px" height="110px">
+    <el-dialog title="下发控制" :close-on-click-modal='false' :visible.sync="controllDialog" width="800px" height="110px">
       <el-table :data="selectedControllers" style="width: 100%" v-loading="controllLoading" :row-style="tableRowStyle">
         <el-table-column prop="wqmc" align="center" :label="$t('message.FogAreaName')" width="180">
         </el-table-column>
-        <el-table-column prop="sbmc" align="center" :label="$t('message.ControllerName')" width="180">
+        <el-table-column prop="kzqmc" align="center" :label="$t('message.ControllerName')" width="180">
         </el-table-column>
         <el-table-column prop="kzqbsm" align="center" :label="$t('message.ControllerNum')" width="180">
         </el-table-column>
@@ -389,7 +391,7 @@
       </span>
     </el-dialog>
     <!-- 修改弹出框 -->
-    <el-dialog :title="$t('message.Update')" :visible.sync="vsVisible" width="1100px">
+    <el-dialog :title="$t('message.Update')" :close-on-click-modal='false' :visible.sync="vsVisible" width="1100px">
       <el-form :model="visibility" :rules="visibilityRules" ref="visibilityForm" label-width="150px" size="mini">
         <div class="bana-informations mt10 hauto">
           <div class="bana-title">{{ $t('message.BasicMessage') }}</div>
@@ -407,7 +409,7 @@
               </li>
               <li>
                 <el-form-item :label="$t('message.VisibilityTop')+'(m)'" prop="njdsx">
-                  <el-input v-model="visibility.njdsx" type="number" auto-complete="off"></el-input>
+                  <el-input v-model="visibility.njdsx" type="number" auto-complete="off" min="0"></el-input>
                 </el-form-item>
               </li>
             </ul>
@@ -458,29 +460,29 @@
               </li>
               <li>
                 <el-form-item label="小车限速值下限(km/h)" prop="xcxszxx">
-                  <el-input v-model="visibility.xcxszxx" type="number" auto-complete="off"></el-input>
+                  <el-input v-model="visibility.xcxszxx" type="number" auto-complete="off" min="0"></el-input>
                 </el-form-item>
               </li>
               <li>
                 <el-form-item label="小车限速值上限(km/h)" prop="xcxszsx">
-                  <el-input v-model="visibility.xcxszsx" type="number" auto-complete="off"></el-input>
+                  <el-input v-model="visibility.xcxszsx" type="number" auto-complete="off" min="0"></el-input>
                 </el-form-item>
               </li>
               <li>
                 <el-form-item label="大车限速值下限(km/h)" prop="dcxszxx">
-                  <el-input v-model="visibility.dcxszxx" type="number" auto-complete="off"></el-input>
+                  <el-input v-model="visibility.dcxszxx" type="number" auto-complete="off" min="0"></el-input>
                 </el-form-item>
               </li>
               <li>
                 <el-form-item label="大车限速值上限(km/h)" prop="dcxszsx">
-                  <el-input v-model="visibility.dcxszsx" type="number" auto-complete="off"></el-input>
+                  <el-input v-model="visibility.dcxszsx" type="number" auto-complete="off" min="0"></el-input>
                 </el-form-item>
               </li>
             </ul>
           </div>
         </div>
-      </el-form>
-      <el-form :model="visibilityItem" :rules="visibilityRules" ref="visibilityForm" label-width="150px" size="mini">
+        <!-- </el-form>
+      <el-form :model="visibilityItem" :rules="visibilityRules" ref="visibilityForm" label-width="150px" size="mini"> -->
         <div class="bana-informations mt20 hauto">
           <div class="bana-title">控制策略</div>
           <div class="bana-information-content">
@@ -534,24 +536,24 @@
               </li>
               <li>
                 <el-form-item :label="$t('message.LightsONDuration')+'(ms)'" prop="ldsc" v-if="visibilityItem.ldscxszt">
-                  <el-input v-model="visibilityItem.ldsc" type="number" auto-complete="off"></el-input>
+                  <el-input v-model="visibilityItem.ldsc" type="number" auto-complete="off" min="0"></el-input>
                 </el-form-item>
               </li>
               <li>
                 <el-form-item :label="$t('message.LightsOFFDuration')+'(ms)'" prop="mdsc"
                   v-if="visibilityItem.mdscxszt">
-                  <el-input v-model="visibilityItem.mdsc" type="number" auto-complete="off"></el-input>
+                  <el-input v-model="visibilityItem.mdsc" type="number" auto-complete="off" min="0"></el-input>
                 </el-form-item>
               </li>
               <li>
                 <el-form-item :label="$t('message.RedTimeLengthening')+'(s)'" prop="hdys"
                   v-if="visibilityItem.hdysxszt">
-                  <el-input v-model="visibilityItem.hdys" type="number" auto-complete="off"></el-input>
+                  <el-input v-model="visibilityItem.hdys" type="number" auto-complete="off" min="0"></el-input>
                 </el-form-item>
               </li>
               <li>
                 <el-form-item :label="$t('message.DeadZoneDuration')+'(s)'" prop="mqys" v-if="visibilityItem.mqysxszt">
-                  <el-input v-model="visibilityItem.mqys" type="number" auto-complete="off"></el-input>
+                  <el-input v-model="visibilityItem.mqys" type="number" auto-complete="off" min="0"></el-input>
                 </el-form-item>
               </li>
               <li>
@@ -622,7 +624,7 @@
           mdsc: this.filterRules('灭灯时长', true, null, null, 'time'),
           hdys: this.filterRules('红灯延时', true, null, null, 'time'),
           mqys: this.filterRules('盲区延时', true, null, null, 'time'),
-          hsjsdzsl: this.filterRules('红色警示灯数量', true, null, null, 'time'),
+          hsjsdzsl: this.filterRules('红色警示灯数量', true, null, null, 'alarm'),
           xsz: this.filterRules('限速值', true, null, null, 'time'),
           xcxszxx: this.filterRules('小车限速值下限', true, null, null, 'time'),
           xcxszsx: this.filterRules('小车限速值上限', true, null, null, 'time'),
@@ -637,7 +639,12 @@
           kd_mdsc: this.filterRules('灭灯时长', true, null, null, 'time'),
           kd_hdys: this.filterRules('红灯延时', true, null, null, 'time'),
           kd_mqys: this.filterRules('盲区延时', true, null, null, 'time'),
-          kd_hsjsdzsl: this.filterRules('红色警示灯数量', true, null, null, 'time'),
+          kd_hsjsdzsl: this.filterRules('红色警示灯数量', true, null, null, 'alarm'),
+          fwzq: this.filterRules('访问周期', true, null, null, 'time'),
+          qrcs: this.filterRules('确认次数', true, null, null, 'qrcs'),
+          kdfz: this.filterRules('开灯阈值', true, null, null, 'qrcs'),
+          gdfz: this.filterRules('关灯阈值', true, null, null, 'qrcs'),
+          //   kzqbms: this.filterRules('检查控制器', false),
         },
         visibilitiesInController: [],
         controllerVisible: false,
@@ -742,16 +749,24 @@
         }
         data.kd_kzcl = this.kd_kzcl
         data.controllers = controllers
-        FogArea.updateFogAreaLightConfig(data).then(value => {
-          this.$refs['lightConfigForm'].validate((valid) => {
-            if (valid) {
+        if (data.gdfz <= data.kdfz) {
+          this.$alert("关灯阀值需大于开灯阀值", '提示', {
+            confirmButtonText: '确定',
+          });
+          return
+        }
+        this.$refs['lightConfigForm'].validate((valid) => {
+          //   console.log(valid)
+          if (valid) {
+            // return
+            FogArea.updateFogAreaLightConfig(data).then(value => {
               if (value.czjg == Dictionary.DatabaseResult.Success) { //返回成功
                 this.$alert('操作成功', '感光配置', {
                   confirmButtonText: '确定'
                 });
               }
-            }
-          })
+            })
+          }
 
         });
       },
@@ -759,14 +774,14 @@
         var data = {}
         //查询数据
         ControlStrategy.getStrategies(data).then(value => {
-            // console.log(value)
+          // console.log(value)
           for (let i = 0; i < value.length; i++) {
             // this.StrategiesDatas.push(value[i]);
             if (value[i].clmc != 6) {
               this.StrategiesData.push(value[i]);
             }
             if (value[i].clbm != 5) {
-            this.StrategiesDatas.push(value[i]);
+              this.StrategiesDatas.push(value[i]);
             }
           }
 
@@ -822,11 +837,23 @@
       },
       //通过雾区查询
       changeFogArea(wqbm) {
+        if (this.$refs['lightConfigForm'] != undefined) {
+          this.$refs['lightConfigForm'].resetFields();
+        }
         var queryParameter = {
           wqbm: wqbm
         };
         this.kzqbms = []
         this.controllerCode = []
+        let fogAreas = JSON.parse(JSON.stringify(this.fogAreas))
+        for (let i = 0; i < this.fogAreas.length; i++) {
+          if (fogAreas[i].wqbm === wqbm) {
+            this.lightConfig = fogAreas[i]
+            this.kd_controller = fogAreas[i]
+            this.kd_kzcl = fogAreas[i].kd_kzcl
+            this.changeRadioController(this.lightConfig.kd_kzcl)
+          }
+        }
         Controller.getControllers(queryParameter).then(value => {
 
           this.controllers = value;
@@ -841,21 +868,9 @@
               }
             }
           }
-          // console.log(this.lightConfig)
-          // console.log(this.controllerCode)
-          //   console.log(this.controllers)
 
         });
-        for (let i = 0; i < this.fogAreas.length; i++) {
-          if (this.fogAreas[i].wqbm === wqbm) {
-            this.lightConfig = this.fogAreas[i]
-            this.kd_controller = this.fogAreas[i]
-            this.kd_kzcl = this.fogAreas[i].kd_kzcl
-            // this.lightConfig.kd_kzcl = this.fogAreas[i].kd_kzcl
-            this.changeRadioController(this.lightConfig.kd_kzcl)
-            //   this.controllerCode = this.fogAreas[i].controllers
-          }
-        }
+
       },
       //亮度等级
       // changeLampGrade(lddj){
@@ -924,8 +939,9 @@
         FogArea.getFogAreas().then(value => {
           for (var i = 0; i < value.length; ++i) {
             value[i].wqbm = value[i].wqbm.toString();
-            this.fogAreas.push(value[i]);
+            // this.fogAreas.push(value[i]);
           }
+          this.fogAreas = JSON.parse(JSON.stringify(value))
           if (value.length > 0) {
             this.wqbm = this.fogAreas[0].wqbm;
             this.changeFogArea(this.wqbm);
@@ -1183,12 +1199,14 @@
           zkb: this.visibilityItem.zkb,
         }
 
-        VisibilityScale.updateVisibilityScale(data).then(value => {
+        // let validate1 = this.formValidate('visibilityForm');
+        // let validate2 = this.formValidate('visibilityItemForm');
+        // validate = [validate1, validate2];
 
-          this.$refs['visibilityForm'].validate((valid) => {
-
-            if (valid) {
-
+        this.$refs["visibilityForm"].validate((valid) => {
+          // Promise.all(validate).then(() => {
+          if (valid) {
+            VisibilityScale.updateVisibilityScale(data).then(value => {
               if (value.czjg == Dictionary.DatabaseResult.Success) { //返回成功
 
                 //这里从已经得到的字典集合找一下就可以了
@@ -1254,9 +1272,9 @@
                   confirmButtonText: '确定'
                 });
               }
-            }
-          })
-        });
+            });
+          }
+        })
       },
 
     }
