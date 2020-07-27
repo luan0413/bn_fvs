@@ -26,7 +26,7 @@
       <div class="changeBoxRightTitle">{{ $t('message.VisibilityDeviceDetails') }}</div>
       <div class="changeBoxRightContent searchBox">
         <el-form :model="visibility" :rules="visibilityRules" ref="visibilityForm" :disabled="visibilityDisabled"
-          label-width="100px" size="mini">
+          label-width="110px" size="mini">
           <ul class="searchList" style="min-height: 40px !important;">
             <li>
               <el-form-item :label="$t('message.DeviceName')" prop="jcymc">
@@ -67,7 +67,7 @@
               </el-form-item>
             </li>
             <li>
-              <el-form-item label="控制器" prop="kzqbm">
+              <el-form-item label="分享能见度数据到" prop="kzqbm">
                 <el-select v-model="visibility.kzqbmlist" :placeholder="$t('message.PleaseSelect')" multiple clearable
                   collapse-tags>
                   <el-option v-for="(item,index) in controllerCode" :key="item.kzqbm" :label="item.kzqmc"
