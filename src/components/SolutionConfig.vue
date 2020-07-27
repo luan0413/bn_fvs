@@ -651,14 +651,14 @@
             <div class="bana-information-content">
               <ul class="gpsFormBox">
                 <li>
-                  <el-form-item label="月" prop="month1">
+                  <el-form-item label="星历参考月" prop="month1">
                     <el-select v-model="gps.month1" :placeholder="$t('message.PleaseSelect')" :disabled="!gps.sfsyxl1 || gps.sfsyxl1 !== 1">
                       <el-option v-for="item in 12" :key="'month1-'+item" :label="item" :value="item"></el-option>
                     </el-select>
                   </el-form-item>
                 </li>
                 <li>
-                  <el-form-item label="日" prop="day1">
+                  <el-form-item label="星历参考日" prop="day1">
                     <el-select
                       v-if="gps.month1==1||gps.month1==3||gps.month1==5||gps.month1==7||gps.month1==8||gps.month1==10||gps.month1==12"
                       v-model="gps.day1" :placeholder="$t('message.PleaseSelect')" :disabled="!gps.sfsyxl1 || gps.sfsyxl1 !== 1">
@@ -741,14 +741,14 @@
             <div class="bana-information-content">
               <ul class="gpsFormBox">
                 <li>
-                  <el-form-item label="月" prop="month2">
+                  <el-form-item label="星历参考月" prop="month2">
                     <el-select v-model="gps.month2" :placeholder="$t('message.PleaseSelect')" :disabled="!gps.sfsyxl2 || gps.sfsyxl2 !== 1">
                       <el-option v-for="item in 12" :key="'month2-'+item" :label="item" :value="item"></el-option>
                     </el-select>
                   </el-form-item>
                 </li>
                 <li>
-                  <el-form-item label="日" prop="day2">
+                  <el-form-item label="星历参考日" prop="day2">
                     <el-select
                       v-if="gps.month2==1||gps.month2==3||gps.month2==5||gps.month2==7||gps.month2==8||gps.month2==10||gps.month2==12"
                       v-model="gps.day2" :placeholder="$t('message.PleaseSelect')" :disabled="!gps.sfsyxl2 || gps.sfsyxl2 !== 1">
@@ -831,14 +831,14 @@
             <div class="bana-information-content">
               <ul class="gpsFormBox">
                 <li>
-                  <el-form-item label="月" prop="month3">
+                  <el-form-item label="星历参考月" prop="month3">
                     <el-select v-model="gps.month3" :placeholder="$t('message.PleaseSelect')" :disabled="!gps.sfsyxl3 || gps.sfsyxl3 !== 1">
                       <el-option v-for="item in 12" :key="'month3-'+item" :label="item" :value="item"></el-option>
                     </el-select>
                   </el-form-item>
                 </li>
                 <li>
-                  <el-form-item label="日" prop="day3">
+                  <el-form-item label="星历参考日" prop="day3">
                     <el-select
                       v-if="gps.month3==1||gps.month3==3||gps.month3==5||gps.month3==7||gps.month3==8||gps.month3==10||gps.month3==12"
                       v-model="gps.day3" :placeholder="$t('message.PleaseSelect')" :disabled="!gps.sfsyxl3 || gps.sfsyxl3 !== 1">
@@ -1127,8 +1127,8 @@
           hsjsdzsl: this.filterRules('红色警示灯数量', true, null, null, 'alarm'),
         },
         gpsRules: {
-          month1: this.filterRules('月', false),
-          day1: this.filterRules('日', false),
+          month1: this.filterRules('星历参考月', false),
+          day1: this.filterRules('星历参考日', false),
           //   startTime1: [{
           //     validator: checkStartTime1,
           //     trigger: 'blur'
@@ -1144,8 +1144,8 @@
           hdys1: this.filterRules('红灯延时', true, null, null, 'time'),
           mqys1: this.filterRules('盲区延时', true, null, null, 'time'),
           hsjsdzsl1: this.filterRules('红色警示灯数量', true, null, null, 'alarm'),
-          month2: this.filterRules('月', false),
-          day2: this.filterRules('日', false),
+          month2: this.filterRules('星历参考月', false),
+          day2: this.filterRules('星历参考日', false),
           //   startTime2: [{
           //     validator: checkStartTime2,
           //     trigger: 'blur'
@@ -1161,8 +1161,8 @@
           hdys2: this.filterRules('红灯延时', true, null, null, 'time'),
           mqys2: this.filterRules('盲区延时', true, null, null, 'time'),
           hsjsdzsl2: this.filterRules('红色警示灯数量', true, null, null, 'alarm'),
-          month3: this.filterRules('月', false),
-          day3: this.filterRules('日', false),
+          month3: this.filterRules('星历参考月', false),
+          day3: this.filterRules('星历参考日', false),
           //   startTime3: [{
           //     validator: checkStartTime3,
           //     trigger: 'blur'

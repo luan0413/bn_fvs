@@ -280,7 +280,7 @@
               <el-tab-pane label="气象数据" name="tabWeather">
                 <div class="weather">
                   <div class="bana-information">
-                    <div class="bana-title">气象参数</div>
+                    <div class="bana-title">{{fogArea.wqmc}}</div>
                     <div class="bana-information-content">
                       <ul class="inf">
                         <li>
@@ -317,7 +317,7 @@
               <el-tab-pane label="光感数据" name="tabLightController">
                 <div class="weather">
                   <div class="bana-information">
-                    <div class="bana-title">遥感参数</div>
+                <div class="bana-title">{{fogArea.wqmc}}</div>
                     <div class="bana-information-content">
                       <ul class="inf" style="margin-top: 0 !important;">
                         <li style="height: 30px !important">
@@ -347,7 +347,7 @@
               <el-tab-pane label="遥感数据" name="tabRemote">
                 <div class="weather">
                   <div class="bana-information">
-                    <div class="bana-title">遥感参数</div>
+                    <div class="bana-title">{{fogArea.wqmc}}</div>
                     <div class="bana-information-content">
                       <ul class="inf">
                         <li>

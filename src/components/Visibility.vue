@@ -43,10 +43,17 @@
               </el-form-item>
             </li>
             <li>
+              <el-form-item :label="$t('message.WorkPattern')" prop="gzms">
+                <el-select v-model="visibility.gzms" :placeholder="$t('message.PleaseSelect')">
+                  <el-option v-for="item in gzmsCodes" :key="item.dm" :label="item.dmsm" :value="item.dm"></el-option>
+                </el-select>
+              </el-form-item>
+            </li>
+            <!-- <li>
               <el-form-item :label="$t('message.Communication')" prop="txcs">
                 <el-input v-model="visibility.txcs"></el-input>
               </el-form-item>
-            </li>
+            </li> -->
           </ul>
           <ul class="searchList" style="min-height: 40px !important;">
             <li>
@@ -57,13 +64,6 @@
             <li>
               <el-form-item :label="$t('message.AlarmThresholdUp')" prop="bjfzsx">
                 <el-input v-model="visibility.bjfzsx"></el-input>
-              </el-form-item>
-            </li>
-            <li>
-              <el-form-item :label="$t('message.WorkPattern')" prop="gzms">
-                <el-select v-model="visibility.gzms" :placeholder="$t('message.PleaseSelect')">
-                  <el-option v-for="item in gzmsCodes" :key="item.dm" :label="item.dmsm" :value="item.dm"></el-option>
-                </el-select>
               </el-form-item>
             </li>
             <li>
