@@ -54,6 +54,9 @@ let filterRules = (name, flag, maxLength, minLength, type) => {
                 // rules.push({ pattern: /^(110|10\d|[1-9]\d|\d)$/, message: '警示灯数量必须在0-99之间', trigger: 'blur' });
                 rules.push({ pattern: /^([0-9]|[1-4]\d|50)$/, message: '警示灯数量组必须在0-50之间', trigger: 'blur' });
                 break;
+            case 'minuet': //访问
+                rules.push({ pattern: /^([0-9]|[1-5]\d|60)$/, message: name + '必须在0-60之间', trigger: 'blur' });
+                break;
             case 'fz': //阀值
                 rules.push({ pattern: /^([0-9]{1,5})$/, message: '阀值必须在0-99999之间', trigger: 'blur' });
                 break;

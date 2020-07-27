@@ -5,7 +5,7 @@
         <span>{{ $t('message.DeviceList') }}</span>
         <el-button class="fr mr20" plain icon="el-icon-plus" @click="initLinkDevice">{{ $t('message.Insert') }}</el-button>
       </div>
-      <el-table :data="linkDevices" ref="linkDeviceTable" height="180" :show-header=false highlight-current-row @current-change="changeLinkDevice" style="width: 100%">
+      <el-table :data="linkDevices" ref="linkDeviceTable" height="282" :show-header=false highlight-current-row @current-change="changeLinkDevice" style="width: 100%">
         <el-table-column prop="sbmc">
         </el-table-column>
         <el-table-column :label="$t('message.Operation')" width="120" header-align="left" align="left">

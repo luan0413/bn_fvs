@@ -7,7 +7,7 @@
         </el-button>
       </div>
       <div class="searchBox">
-        <el-table :data="controllers" ref="controllerTable" :show-header=false height="206" highlight-current-row
+        <el-table :data="controllers" ref="controllerTable" :show-header=false height="282" highlight-current-row
           @current-change="changeController" style="width: 100%">
           <el-table-column prop="kzqmc">
           </el-table-column>

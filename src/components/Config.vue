@@ -270,6 +270,7 @@
               else
               {
                 var that = this;
+                // console.log(that.$refs["fogAreaTable"])
                 setTimeout(function () {
                   that.$refs["fogAreaTable"].setCurrentRow(value[0]);
                 }, 0);

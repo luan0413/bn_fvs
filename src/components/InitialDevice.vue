@@ -640,7 +640,7 @@
           kd_hdys: this.filterRules('红灯延时', true, null, null, 'time'),
           kd_mqys: this.filterRules('盲区延时', true, null, null, 'time'),
           kd_hsjsdzsl: this.filterRules('红色警示灯数量', true, null, null, 'alarm'),
-          fwzq: this.filterRules('访问周期', true, null, null, 'time'),
+          fwzq: this.filterRules('访问周期', true, null, null, 'minuet'),
           qrcs: this.filterRules('确认次数', true, null, null, 'qrcs'),
           kdfz: this.filterRules('开灯阈值', true, null, null, 'qrcs'),
           gdfz: this.filterRules('关灯阈值', true, null, null, 'qrcs'),
