@@ -53,7 +53,7 @@
                                     </li>
                                     <li>
                                         <el-form-item :label="$t('message.FoglightLuminance')+'：'" prop="wdld" v-if="lampZt.wdldxszt">
-                                            <el-input v-model="lamp.wdld" type="number" min="1" max="99" step="1"></el-input>
+                                            <el-input v-model.number="lamp.wdld" type="number" min="1" max="99" step="1"></el-input>
                                         </el-form-item>
                                     </li>
                                     <li>
@@ -72,32 +72,33 @@
                                     </li>
                                     <li>
                                         <el-form-item :label="$t('message.LightsONDuration')+'：'" prop="ldsc" v-if="lampZt.ldscxszt">
-                                            <el-input v-model="lamp.ldsc" type="number" min="1" max="99999" step="1"></el-input>
+                                            <el-input v-model.number="lamp.ldsc" type="number" min="1" max="99999"
+                                              step="1"></el-input>
                                             <span class="unit">ms</span>
                                         </el-form-item>
                                     </li>
 
                                     <li>
                                         <el-form-item :label="$t('message.LightsOFFDuration')+'：'" prop="mdsc" v-if="lampZt.mdscxszt">
-                                            <el-input v-model="lamp.mdsc" type="number" min="1" max="99999" step="1"></el-input>
+                                            <el-input v-model.number="lamp.mdsc" type="number" min="1" max="99999" step="1"></el-input>
                                             <span class="unit">ms</span>
                                         </el-form-item>
                                     </li>
                                     <li>
                                         <el-form-item :label="$t('message.RedTimeLengthening')+'：'" prop="hdys" v-if="lampZt.hdysxszt">
-                                            <el-input v-model="lamp.hdys" type="number" min="1" max="99999" step="1"></el-input>
+                                            <el-input v-model.number="lamp.hdys" type="number" min="1" max="99999" step="1"></el-input>
                                             <span class="unit">s</span>
                                         </el-form-item>
                                     </li>
                                     <li>
                                         <el-form-item :label="$t('message.DeadZoneDuration')+'：'" prop="mqys" v-if="lampZt.mqysxszt">
-                                            <el-input v-model="lamp.mqys" type="number" min="1" max="99999" step="1"></el-input>
+                                            <el-input v-model.number="lamp.mqys" type="number" min="1" max="99999" step="1"></el-input>
                                             <span class="unit">s</span>
                                         </el-form-item>
                                     </li>
                                     <li>
                                         <el-form-item :label="$t('message.RedLightsNumber')+'：'" prop="hsjsdzsl" v-if="lampZt.hsjsdzslxszt">
-                                            <el-input v-model="lamp.hsjsdzsl" type="number" min="0" max="50" step="1"></el-input>
+                                            <el-input v-model.number="lamp.hsjsdzsl" type="number" min="0" max="50" step="1"></el-input>
                                             <span class="unit">{{ $t('message.Ge') }}</span>
                                         </el-form-item>
                                     </li>

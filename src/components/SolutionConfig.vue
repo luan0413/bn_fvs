@@ -706,7 +706,7 @@
                 </li>
                 <li>
                   <el-form-item label="雾灯亮度" prop="wdld1">
-                    <el-input v-model="gps.wdld1" type="number" min="0"></el-input>
+                    <el-input v-model.number="gps.wdld1" type="number" min="0"></el-input>
                   </el-form-item>
                 </li>
                 <li>
@@ -720,17 +720,17 @@
                 </li>
                 <li>
                   <el-form-item label="红灯延时" prop="hdys1">
-                    <el-input v-model="gps.hdys1" type="number" min="0"></el-input>
+                    <el-input v-model.number="gps.hdys1" type="number" min="0"></el-input>
                   </el-form-item>
                 </li>
                 <li>
                   <el-form-item label="盲区延时" prop="mqys1">
-                    <el-input v-model="gps.mqys1" type="number" min="0"></el-input>
+                    <el-input v-model.number="gps.mqys1" type="number" min="0"></el-input>
                   </el-form-item>
                 </li>
                 <li>
                   <el-form-item label="警示灯组数" prop="hsjsdzsl1">
-                    <el-input v-model="gps.hsjsdzsl1" type="number" min="0"></el-input>
+                    <el-input v-model.number="gps.hsjsdzsl1" type="number" min="0"></el-input>
                   </el-form-item>
                 </li>
               </ul>
@@ -796,7 +796,7 @@
                 </li>
                 <li>
                   <el-form-item label="雾灯亮度" prop="wdld2">
-                    <el-input v-model="gps.wdld2" type="number" min="0"></el-input>
+                    <el-input v-model.number="gps.wdld2" type="number" min="0"></el-input>
                   </el-form-item>
                 </li>
                 <li>
@@ -810,17 +810,17 @@
                 </li>
                 <li>
                   <el-form-item label="红灯延时" prop="hdys2">
-                    <el-input v-model="gps.hdys2" type="number" min="0"></el-input>
+                    <el-input v-model.number="gps.hdys2" type="number" min="0"></el-input>
                   </el-form-item>
                 </li>
                 <li>
                   <el-form-item label="盲区延时" prop="mqys2">
-                    <el-input v-model="gps.mqys2" type="number" min="0"></el-input>
+                    <el-input v-model.number="gps.mqys2" type="number" min="0"></el-input>
                   </el-form-item>
                 </li>
                 <li>
                   <el-form-item label="警示灯组数" prop="hsjsdzsl2">
-                    <el-input v-model="gps.hsjsdzsl2" type="number" min="0"></el-input>
+                    <el-input v-model.number="gps.hsjsdzsl2" type="number" min="0"></el-input>
                   </el-form-item>
                 </li>
               </ul>
@@ -886,7 +886,7 @@
                 </li>
                 <li>
                   <el-form-item label="雾灯亮度" prop="wdld3">
-                    <el-input v-model="gps.wdld3" type="number" min="0"></el-input>
+                    <el-input v-model.number="gps.wdld3" type="number" min="0"></el-input>
                   </el-form-item>
                 </li>
                 <li>
@@ -900,17 +900,17 @@
                 </li>
                 <li>
                   <el-form-item label="红灯延时" prop="hdys3">
-                    <el-input v-model="gps.hdys3" type="number" min="0"></el-input>
+                    <el-input v-model.number="gps.hdys3" type="number" min="0"></el-input>
                   </el-form-item>
                 </li>
                 <li>
                   <el-form-item label="盲区延时" prop="mqys3">
-                    <el-input v-model="gps.mqys3" type="number" min="0"></el-input>
+                    <el-input v-model.number="gps.mqys3" type="number" min="0"></el-input>
                   </el-form-item>
                 </li>
                 <li>
                   <el-form-item label="警示灯组数" prop="hsjsdzsl3">
-                    <el-input v-model="gps.hsjsdzsl3" type="number" min="0"></el-input>
+                    <el-input v-model.number="gps.hsjsdzsl3" type="number" min="0"></el-input>
                   </el-form-item>
                 </li>
               </ul>
@@ -1453,7 +1453,7 @@
 
         for (let i = 0; i < this.StrategiesDatas.length; i++) {
           if (this.StrategiesDatas[i].clbm == val) {
-            this.programItem = this.StrategiesDatas[i];
+            this.programItem = JSON.parse(JSON.stringify(this.StrategiesDatas[i]))
           }
         }
 

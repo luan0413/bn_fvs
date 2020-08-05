@@ -43,7 +43,7 @@
               </el-form-item>
 
               <el-form-item :label="$t('message.FoglightLuminance')" prop="wdld" v-if="Strategies.wdldbjzt">
-                <el-input v-model="Strategies.wdld" type="number" min="1" max="127" step="1" auto-complete="off"></el-input>
+                <el-input v-model.number="Strategies.wdld" type="number" min="1" max="127" step="1" auto-complete="off"></el-input>
               </el-form-item>
               <el-form-item :label="$t('message.FlickerFrequency')" v-if="Strategies.ssplbjzt">
                 <el-select v-model="Strategies.sspl" :placeholder="$t('message.PleaseSelect')">
@@ -57,23 +57,23 @@
               </el-form-item>
 
               <el-form-item :label="$t('message.LightsONDuration')+'(ms)'" prop="ldsc" v-if="Strategies.ldscbjzt">
-                <el-input v-model="Strategies.ldsc" type="number" auto-complete="off"></el-input>
+                <el-input v-model.number="Strategies.ldsc" type="number" auto-complete="off"></el-input>
               </el-form-item>
 
               <el-form-item :label="$t('message.LightsOFFDuration')+'(ms)'" prop="mdsc" v-if="Strategies.mdscbjzt">
-                <el-input v-model="Strategies.mdsc" type="number" auto-complete="off"></el-input>
+                <el-input v-model.number="Strategies.mdsc" type="number" auto-complete="off"></el-input>
               </el-form-item>
 
               <el-form-item :label="$t('message.RedTimeLengthening')+'(s)'" prop="hdys" v-if="Strategies.hdysbjzt">
-                <el-input v-model="Strategies.hdys" type="number" auto-complete="off"></el-input>
+                <el-input v-model.number="Strategies.hdys" type="number" auto-complete="off"></el-input>
               </el-form-item>
 
               <el-form-item :label="$t('message.DeadZoneDuration')+'(s)'" prop="mqys" v-if="Strategies.mqysbjzt">
-                <el-input v-model="Strategies.mqys" type="number" auto-complete="off"></el-input>
+                <el-input v-model.number="Strategies.mqys" type="number" auto-complete="off"></el-input>
               </el-form-item>
 
               <el-form-item :label="$t('message.RedLightsNumber')" prop="hsjsdzsl" v-if="Strategies.hsjsdzslbjzt">
-                <el-input v-model="Strategies.hsjsdzsl" type="number" auto-complete="off"  min="0" max="50"></el-input>
+                <el-input v-model.number="Strategies.hsjsdzsl" type="number" auto-complete="off"  min="0" max="50"></el-input>
               </el-form-item>
               <el-form-item label="策略描述">
                 <el-input type="textarea" v-model="Strategies.clms"></el-input>

@@ -100,7 +100,7 @@
                   </li> -->
                   <li>
                     <el-form-item :label="$t('message.RelayNum')" prop="jdqbsm">
-                      <el-input v-model="fogArea.jdqbsm" type="number" :placeholder="$t('message.PleaseInput')"></el-input>
+                      <el-input v-model.number="fogArea.jdqbsm" type="number" :placeholder="$t('message.PleaseInput')"></el-input>
                     </el-form-item>
                   </li>
                   <li>

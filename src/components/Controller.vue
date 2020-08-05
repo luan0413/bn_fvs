@@ -39,7 +39,7 @@
                     :placeholder="$t('message.PleaseInput')"></el-input>
                 </el-form-item>
                 <el-form-item :label="$t('message.ControllerNum')" prop="kzqbsm" label-width="80px">
-                  <el-input v-model="controller.kzqbsm" type="number" :placeholder="$t('message.PleaseInput')">
+                  <el-input v-model.number="controller.kzqbsm" type="number" :placeholder="$t('message.PleaseInput')">
                   </el-input>
                 </el-form-item>
               </li>
@@ -95,7 +95,7 @@
             <ul style="width: 36%;float: left;">
               <li class="lampList">
                 <el-form-item :label="$t('message.PollingInterval')" prop="wdxjjg">
-                  <el-input v-model="controller.wdxjjg" type="number" :placeholder="$t('message.PleaseInput')">
+                  <el-input v-model.number="controller.wdxjjg" type="number" :placeholder="$t('message.PleaseInput')">
                   </el-input>
                 </el-form-item>
               </li>
@@ -106,7 +106,7 @@
               </li>
               <li class="lampList">
                 <el-form-item label="端口">
-                  <el-input v-model="controller.kzqdk" :placeholder="$t('message.PleaseInput')" type="number">
+                  <el-input v-model.number="controller.kzqdk" :placeholder="$t('message.PleaseInput')" type="number">
                   </el-input>
                 </el-form-item>
               </li>
@@ -152,12 +152,12 @@
           <ul class="searchList">
             <span class="lampLabel">{{ $t('message.StatrStopNum') }}</span>
             <li class="fl">
-              <el-input v-model="lampAddress.ksdz" style="width: 150px;padding: 0 8px;"
+              <el-input v-model.number="lampAddress.ksdz" style="width: 150px;padding: 0 8px;"
                 :placeholder="$t('message.StartAddress')" type="number" min="1" max="9999" size="mini"></el-input>
             </li>
             <span class="lampPoint fl">~</span>
             <li class="fl">
-              <el-input v-model="lampAddress.jsdz" style="width: 150px;padding-left: 8px;"
+              <el-input v-model.number="lampAddress.jsdz" style="width: 150px;padding-left: 8px;"
                 :placeholder="$t('message.StopAddress')" type="number" min="1" max="9999" size="mini"></el-input>
             </li>
             <li class="fl ml20">

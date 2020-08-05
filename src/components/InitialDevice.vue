@@ -116,19 +116,23 @@
               size="mini">
               <div class="light_top_box">
                 <el-form-item label="访问周期(分钟)" prop="fwzq">
-                  <el-input v-model="lightConfig.fwzq" :placeholder="$t('message.PleaseInput')" type="number" min="0">
+                  <el-input v-model.number="lightConfig.fwzq" :placeholder="$t('message.PleaseInput')" type="number"
+                    min="0">
                   </el-input>
                 </el-form-item>
                 <el-form-item label="确认次数" prop="qrcs">
-                  <el-input v-model="lightConfig.qrcs" :placeholder="$t('message.PleaseInput')" type="number" min="0">
+                  <el-input v-model.number="lightConfig.qrcs" :placeholder="$t('message.PleaseInput')" type="number"
+                    min="0">
                   </el-input>
                 </el-form-item>
                 <el-form-item label="开灯阈值" prop="kdfz">
-                  <el-input v-model="lightConfig.kdfz" :placeholder="$t('message.PleaseInput')" type="number" min="0">
+                  <el-input v-model.number="lightConfig.kdfz" :placeholder="$t('message.PleaseInput')" type="number"
+                    min="0">
                   </el-input>
                 </el-form-item>
                 <el-form-item label="关灯阈值" prop="gdfz">
-                  <el-input v-model="lightConfig.gdfz" :placeholder="$t('message.PleaseInput')" type="number" min="0">
+                  <el-input v-model.number="lightConfig.gdfz" :placeholder="$t('message.PleaseInput')" type="number"
+                    min="0">
                   </el-input>
                 </el-form-item>
                 <el-form-item label="检查控制器">
@@ -176,7 +180,7 @@
                         <li>
                           <el-form-item :label="$t('message.FoglightLuminance')" prop="kd_wdld"
                             v-if="kd_controller.wdldxszt">
-                            <el-input v-model="lightConfig.kd_wdld" type="number" min="1" max="10" step="1"
+                            <el-input v-model.number="lightConfig.kd_wdld" type="number" min="1" max="10" step="1"
                               auto-complete="off">
                             </el-input>
                           </el-form-item>
@@ -204,34 +208,34 @@
                         <li>
                           <el-form-item :label="$t('message.LightsONDuration')+'(ms)'" prop="kd_ldsc"
                             v-if="kd_controller.ldscxszt">
-                            <el-input v-model="lightConfig.kd_ldsc" type="number" min="0"></el-input>
+                            <el-input v-model.number="lightConfig.kd_ldsc" type="number" min="0"></el-input>
                           </el-form-item>
                         </li>
                         <li>
                           <el-form-item :label="$t('message.LightsOFFDuration')+'(ms)'" prop="kd_mdsc"
                             v-if="kd_controller.mdscxszt">
-                            <el-input v-model="lightConfig.kd_mdsc" type="number" auto-complete="off" min="0">
+                            <el-input v-model.number="lightConfig.kd_mdsc" type="number" auto-complete="off" min="0">
                             </el-input>
                           </el-form-item>
                         </li>
                         <li>
                           <el-form-item :label="$t('message.RedTimeLengthening')+'(s)'" prop="kd_hdys"
                             v-if="kd_controller.hdysxszt">
-                            <el-input v-model="lightConfig.kd_hdys" type="number" auto-complete="off" min="0">
+                            <el-input v-model.number="lightConfig.kd_hdys" type="number" auto-complete="off" min="0">
                             </el-input>
                           </el-form-item>
                         </li>
                         <li>
                           <el-form-item :label="$t('message.DeadZoneDuration')+'(s)'" prop="kd_mqys"
                             v-if="kd_controller.mqysxszt">
-                            <el-input v-model="lightConfig.kd_mqys" type="number" auto-complete="off" min="0">
+                            <el-input v-model.number="lightConfig.kd_mqys" type="number" auto-complete="off" min="0">
                             </el-input>
                           </el-form-item>
                         </li>
                         <li>
                           <el-form-item :label="$t('message.RedLightsNumber')" prop="kd_hsjsdzsl"
                             v-if="kd_controller.hsjsdzslxszt">
-                            <el-input v-model="lightConfig.kd_hsjsdzsl" type="number" auto-complete="off" min="0"
+                            <el-input v-model.number="lightConfig.kd_hsjsdzsl" type="number" auto-complete="off" min="0"
                               max="50">
                             </el-input>
                           </el-form-item>
@@ -409,7 +413,7 @@
               </li>
               <li>
                 <el-form-item :label="$t('message.VisibilityTop')+'(m)'" prop="njdsx">
-                  <el-input v-model="visibility.njdsx" type="number" auto-complete="off" min="0"></el-input>
+                  <el-input v-model.number="visibility.njdsx" type="number" auto-complete="off" min="0"></el-input>
                 </el-form-item>
               </li>
             </ul>
@@ -460,22 +464,22 @@
               </li>
               <li>
                 <el-form-item label="小车限速值下限(km/h)" prop="xcxszxx">
-                  <el-input v-model="visibility.xcxszxx" type="number" auto-complete="off" min="0"></el-input>
+                  <el-input v-model.number="visibility.xcxszxx" type="number" auto-complete="off" min="0"></el-input>
                 </el-form-item>
               </li>
               <li>
                 <el-form-item label="小车限速值上限(km/h)" prop="xcxszsx">
-                  <el-input v-model="visibility.xcxszsx" type="number" auto-complete="off" min="0"></el-input>
+                  <el-input v-model.number="visibility.xcxszsx" type="number" auto-complete="off" min="0"></el-input>
                 </el-form-item>
               </li>
               <li>
                 <el-form-item label="大车限速值下限(km/h)" prop="dcxszxx">
-                  <el-input v-model="visibility.dcxszxx" type="number" auto-complete="off" min="0"></el-input>
+                  <el-input v-model.number="visibility.dcxszxx" type="number" auto-complete="off" min="0"></el-input>
                 </el-form-item>
               </li>
               <li>
                 <el-form-item label="大车限速值上限(km/h)" prop="dcxszsx">
-                  <el-input v-model="visibility.dcxszsx" type="number" auto-complete="off" min="0"></el-input>
+                  <el-input v-model.number="visibility.dcxszsx" type="number" auto-complete="off" min="0"></el-input>
                 </el-form-item>
               </li>
             </ul>
@@ -512,7 +516,8 @@
               </li>
               <li>
                 <el-form-item :label="$t('message.FoglightLuminance')" prop="wdld" v-if="visibilityItem.wdldxszt">
-                  <el-input v-model="visibilityItem.wdld" type="number" min="1" max="10" step="1" auto-complete="off">
+                  <el-input v-model.number="visibilityItem.wdld" type="number" min="1" max="10" step="1"
+                    auto-complete="off">
                   </el-input>
                 </el-form-item>
               </li>
@@ -536,29 +541,29 @@
               </li>
               <li>
                 <el-form-item :label="$t('message.LightsONDuration')+'(ms)'" prop="ldsc" v-if="visibilityItem.ldscxszt">
-                  <el-input v-model="visibilityItem.ldsc" type="number" auto-complete="off" min="0"></el-input>
+                  <el-input v-model.number="visibilityItem.ldsc" type="number" auto-complete="off" min="0"></el-input>
                 </el-form-item>
               </li>
               <li>
                 <el-form-item :label="$t('message.LightsOFFDuration')+'(ms)'" prop="mdsc"
                   v-if="visibilityItem.mdscxszt">
-                  <el-input v-model="visibilityItem.mdsc" type="number" auto-complete="off" min="0"></el-input>
+                  <el-input v-model.number="visibilityItem.mdsc" type="number" auto-complete="off" min="0"></el-input>
                 </el-form-item>
               </li>
               <li>
                 <el-form-item :label="$t('message.RedTimeLengthening')+'(s)'" prop="hdys"
                   v-if="visibilityItem.hdysxszt">
-                  <el-input v-model="visibilityItem.hdys" type="number" auto-complete="off" min="0"></el-input>
+                  <el-input v-model.number="visibilityItem.hdys" type="number" auto-complete="off" min="0"></el-input>
                 </el-form-item>
               </li>
               <li>
                 <el-form-item :label="$t('message.DeadZoneDuration')+'(s)'" prop="mqys" v-if="visibilityItem.mqysxszt">
-                  <el-input v-model="visibilityItem.mqys" type="number" auto-complete="off" min="0"></el-input>
+                  <el-input v-model.number="visibilityItem.mqys" type="number" auto-complete="off" min="0"></el-input>
                 </el-form-item>
               </li>
               <li>
                 <el-form-item :label="$t('message.RedLightsNumber')" prop="hsjsdzsl" v-if="visibilityItem.hsjsdzslxszt">
-                  <el-input v-model="visibilityItem.hsjsdzsl" type="number" auto-complete="off" min="0" max="50">
+                  <el-input v-model.number="visibilityItem.hsjsdzsl" type="number" auto-complete="off" min="0" max="50">
                   </el-input>
                 </el-form-item>
               </li>
@@ -589,6 +594,7 @@
         kzqbms: [],
         controllerCode: [], //检车控制器
         kd_kzcl: '', //开灯控制策略
+        old_kzcl: '',
         zkbCodes: [],
         lightConfig: {},
         activeName: 'first',
@@ -660,6 +666,7 @@
       };
     },
     created() {
+      this.loadStrategies();
       this.loadFogAreas();
       this.tableHeight = window.screen.availHeight - 485 + 'px';
     },
@@ -667,7 +674,6 @@
       this.loadVisibilityScales();
       this.loadLampLevelCodes();
       //   this.loadControllerWorkModeCodes();
-      this.loadStrategies();
     },
     methods: {
       //tab切换
@@ -688,6 +694,7 @@
             jcld: flag
           })
         }
+        // console.log(this.lightConfig)
         let {
           wqbm,
           fwzq,
@@ -747,6 +754,7 @@
           //   gd_mqys,
           //   gd_hsjsdzsl
         }
+        // console.log(data)
         data.kd_kzcl = this.kd_kzcl
         data.controllers = controllers
         if (data.gdfz <= data.kdfz) {
@@ -756,11 +764,10 @@
           return
         }
         this.$refs['lightConfigForm'].validate((valid) => {
-          //   console.log(valid)
           if (valid) {
-            // return
             FogArea.updateFogAreaLightConfig(data).then(value => {
               if (value.czjg == Dictionary.DatabaseResult.Success) { //返回成功
+                this.loadFogAreas(data.wqbm);
                 this.$alert('操作成功', '感光配置', {
                   confirmButtonText: '确定'
                 });
@@ -774,9 +781,7 @@
         var data = {}
         //查询数据
         ControlStrategy.getStrategies(data).then(value => {
-          // console.log(value)
           for (let i = 0; i < value.length; i++) {
-            // this.StrategiesDatas.push(value[i]);
             if (value[i].clmc != 6) {
               this.StrategiesData.push(value[i]);
             }
@@ -788,7 +793,6 @@
         });
       },
       changeRadioVisibility(val) {
-        // console.log(val)
         for (let i = 0; i < this.StrategiesData.length; i++) {
           if (this.StrategiesData[i].clbm == val) {
             this.visibilityItem = this.StrategiesData[i];
@@ -796,8 +800,8 @@
         }
 
       },
-      changeRadioController(val) {
-        this.kd_kzcl = val
+      changeRadioController(val, flag) {
+        this.kd_kzcl = JSON.parse(JSON.stringify(val))
         for (let i = 0; i < this.StrategiesDatas.length; i++) {
           if (this.StrategiesDatas[i].clbm == val) {
             let {
@@ -825,9 +829,27 @@
               mqysxszt,
               hsjsdzslxszt
             }
-            // console.log(this.kd_controller)
+            if (!flag) {
+              this.getLightConfig(this.StrategiesDatas[i])
+            }
+            return
           }
         }
+
+      },
+      //切换策略，得到默认值
+      getLightConfig(data) {
+        this.lightConfig.kd_wdlddj = data.wdlddj;
+        this.lightConfig.kd_sspl = data.sspl;
+        this.lightConfig.kd_zkb = data.zkb;
+        this.lightConfig.kd_wdld = data.wdld;
+        this.lightConfig.kd_ldsc = data.ldsc;
+        this.lightConfig.kd_wdkz = data.wdkz;
+        this.lightConfig.kd_ldsc = data.ldsc;
+        this.lightConfig.kd_mdsc = data.mdsc;
+        this.lightConfig.kd_hdys = data.hdys;
+        this.lightConfig.kd_mqys = data.mqys;
+        this.lightConfig.kd_hsjsdzsl = data.hsjsdzsl;
       },
       loadVisibilityScales() {
         VisibilityScale.getVisibilityScales().then(value => { //查询能见度等级
@@ -849,9 +871,10 @@
         for (let i = 0; i < this.fogAreas.length; i++) {
           if (fogAreas[i].wqbm === wqbm) {
             this.lightConfig = fogAreas[i]
+            // this.getLightConfig(fogAreas[i])
             this.kd_controller = fogAreas[i]
             this.kd_kzcl = fogAreas[i].kd_kzcl
-            this.changeRadioController(this.lightConfig.kd_kzcl)
+            this.changeRadioController(this.lightConfig.kd_kzcl, true)
           }
         }
         Controller.getControllers(queryParameter).then(value => {
@@ -934,7 +957,7 @@
         });
       },
       //读取雾区集合
-      loadFogAreas() {
+      loadFogAreas(wqbm) {
         this.fogAreas = [];
         FogArea.getFogAreas().then(value => {
           for (var i = 0; i < value.length; ++i) {
@@ -943,8 +966,13 @@
           }
           this.fogAreas = JSON.parse(JSON.stringify(value))
           if (value.length > 0) {
-            this.wqbm = this.fogAreas[0].wqbm;
-            this.changeFogArea(this.wqbm);
+            if (wqbm) {
+              this.wqbm = wqbm;
+              this.changeFogArea(wqbm);
+            } else {
+              this.wqbm = this.fogAreas[0].wqbm;
+              this.changeFogArea(this.wqbm);
+            }
           }
 
         });
@@ -1081,7 +1109,7 @@
             kzqdks: [this.selectedController.kzqdk],
             visibilityScales: this.visibilities
           }
-          console.log(data)
+        //   console.log(data)
           Controller.setVisibilityScales(data).then(value => {
 
             if (value[0].czjg == Dictionary.SendResult.Success) {
@@ -1277,7 +1305,19 @@
         })
       },
 
-    }
+    },
+    watch: {
+      kd_kzcl: {
+        deep: true,
+        handler: function (newval, oldVal) {
+          this.old_kzcl = oldVal
+          //   console.log(newval)
+          //   console.log(oldVal)
+        },
+        immediate: true
+      }
+    },
+
   }
 
 </script>

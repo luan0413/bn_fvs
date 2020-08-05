@@ -140,7 +140,7 @@
             </div>
             <div class="dialoginp">
               <el-form-item :label="$t('message.OrganizationNum')">
-                <el-input v-model="department.bzrs" type="number" :placeholder="$t('message.PleaseInput')"></el-input>
+                <el-input v-model.number="department.bzrs" type="number" :placeholder="$t('message.PleaseInput')"></el-input>
               </el-form-item>
             </div>
             <div class="dialoginp">

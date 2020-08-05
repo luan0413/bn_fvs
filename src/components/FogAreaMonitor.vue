@@ -704,7 +704,7 @@
                     </li>
                     <li>
                       <el-form-item :label="$t('message.FoglightLuminance')+'：'" prop="wdld" v-if="lampZt.wdldxszt">
-                        <el-input v-model="lampDialog.wdld" type="number" min="1" max="99" step="1"></el-input>
+                        <el-input v-model.number="lampDialog.wdld" type="number" min="1" max="99" step="1"></el-input>
                       </el-form-item>
                     </li>
                     <li>
@@ -725,33 +725,33 @@
                     </li>
                     <li>
                       <el-form-item :label="$t('message.LightsONDuration')+'：'" prop="ldsc" v-if="lampZt.ldscxszt">
-                        <el-input v-model="lampDialog.ldsc" type="number" min="1" max="99999" step="1"></el-input>
+                        <el-input v-model.number="lampDialog.ldsc" type="number" min="1" max="99999" step="1"></el-input>
                         <span class="unit">ms</span>
                       </el-form-item>
                     </li>
 
                     <li>
                       <el-form-item :label="$t('message.LightsOFFDuration')+'：'" prop="mdsc" v-if="lampZt.mdscxszt">
-                        <el-input v-model="lampDialog.mdsc" type="number" min="1" max="99999" step="1"></el-input>
+                        <el-input v-model.number="lampDialog.mdsc" type="number" min="1" max="99999" step="1"></el-input>
                         <span class="unit">ms</span>
                       </el-form-item>
                     </li>
                     <li>
                       <el-form-item :label="$t('message.RedTimeLengthening')+'：'" prop="hdys" v-if="lampZt.hdysxszt">
-                        <el-input v-model="lampDialog.hdys" type="number" min="1" max="99999" step="1"></el-input>
+                        <el-input v-model.number="lampDialog.hdys" type="number" min="1" max="99999" step="1"></el-input>
                         <span class="unit">s</span>
                       </el-form-item>
                     </li>
                     <li>
                       <el-form-item :label="$t('message.DeadZoneDuration')+'：'" prop="mqys" v-if="lampZt.mqysxszt">
-                        <el-input v-model="lampDialog.mqys" type="number" min="1" max="99999" step="1"></el-input>
+                        <el-input v-model.number="lampDialog.mqys" type="number" min="1" max="99999" step="1"></el-input>
                         <span class="unit">s</span>
                       </el-form-item>
                     </li>
                     <li>
                       <el-form-item :label="$t('message.RedLightsNumber')+'：'" prop="hsjsdzsl"
                         v-if="lampZt.hsjsdzslxszt">
-                        <el-input v-model="lampDialog.hsjsdzsl" type="number" min="0" max="50" step="1"></el-input>
+                        <el-input v-model.number="lampDialog.hsjsdzsl" type="number" min="0" max="50" step="1"></el-input>
                         <span class="unit">{{ $t('message.Ge') }}</span>
                       </el-form-item>
                     </li>
@@ -773,7 +773,7 @@
           <!-- 确定下发（雾灯） -->
           <div style="margin-left: 600px;">
             <span class="el-form-item__label" style="line-height: 24px;">干预时长:</span>
-            <el-input v-model="cxsj" size="mini" type="number" min="0" max="99999" step="1"></el-input>
+            <el-input v-model.number="cxsj" size="mini" type="number" min="0" max="99999" step="1"></el-input>
             <span class="el-form-item__label" style="line-height: 24px;">分钟</span>
           </div>
           <el-button type="primary" @click="setControllersConfig" size="mini" style="padding: 7px 15px;">
@@ -1192,6 +1192,7 @@
         for (let i = 0; i < this.StrategiesDatas.length; i++) {
           if (this.StrategiesDatas[i].clbm == val) {
             this.clms = this.StrategiesDatas[i].clms;
+            // console.log(this.StrategiesDatas[i])
             this.lampDialog = {
               wdlddj: this.StrategiesDatas[i].wdlddj,
               wdld: this.StrategiesDatas[i].wdld,
@@ -1217,6 +1218,9 @@
               mqysxszt: this.lampXszt.mqysxszt,
               hsjsdzslxszt: this.lampXszt.hsjsdzslxszt,
             }
+            // console.log(this.StrategiesDatas[i].wdlddj)
+            // console.log(this.lddjCodes)
+            // console.log(this.fogArea.wdlddj)
             this.lampZt = {
               wdlddjxszt: this.StrategiesDatas[i].wdlddjxszt,
               ssplxszt: this.StrategiesDatas[i].ssplxszt,
@@ -1475,6 +1479,8 @@
             that.changeLampImage(fogArea.wdkz);
             that.changBtnDisable(fogArea.gzms);
 
+            // console.log(fogArea)
+
             if (fogArea.gzms != 2 && fogArea.gzms != 5) {
               this.djs = "-";
             }
@@ -1726,7 +1732,8 @@
             }
           }
           this.kzcl = this.fogArea.kzcl;
-          // console.log(this.lampDialog)
+          this.lampDialog = JSON.parse(JSON.stringify(this.fogArea))
+          
           this.lamp = {
             wdkz: this.lampXszt.wdkz,
             wdlddj: this.lampXszt.wdlddj,
